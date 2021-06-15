@@ -1,0 +1,23 @@
+PASOS GITHUB con FORKS 
+
+Inicio
+
+- Crear repositorio principal
+- El resto hacer fork al repositorio principal
+	-clonar los repositorios a los equipos locales
+	-unir los forks locales al principal
+
+*desde la carpeta Proyecto01 (la de github)
+*git remote add upstream https://github.com/usoala/Proyecto01.git
+*git remote -v
+
+Trabajando
+
+- git pull upstream
+
+- git add .
+- git commit -m "descripcion avance"
+- git push origin
+
+-desde github contribute -> pull request
+		
