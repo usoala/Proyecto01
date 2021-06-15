@@ -6,8 +6,7 @@ import java.util.logging.Logger;
 /**
  * @ClassName JuegoException
  *
- * @author María Castro, Patricia García, Usoa Larrarte, Jennifer Pérez y Sara
- *         Silvo
+ * @author Usoa Larrarte
  *
  * @date 15 jun. 2021
  * 
@@ -101,7 +100,6 @@ public class JuegoException extends Exception {
 	public String toString() {
 		Logger.getLogger(JuegoException.class.getName()).log(level, null, super.getMessage());
 		return super.getMessage();
-
 	}
 
 }

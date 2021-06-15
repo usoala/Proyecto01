@@ -5,8 +5,7 @@ import java.util.Scanner;
 /**
  * @ClassName Teclado
  *
- * @author María Castro, Patricia García, Usoa Larrarte, Jennifer Pérez y Sara
- *         Silvo
+ * @author Usoa Larrarte
  *
  * @date 15 jun. 2021
  * 

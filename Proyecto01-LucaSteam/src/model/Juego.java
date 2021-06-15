@@ -21,8 +21,7 @@ public class Juego {
 	private Genero genero;
 	private Plataforma plataforma;
 	private Double ventas;
-	
-	
+
 	/**
 	 * Constructor de la clase Juego
 	 *
@@ -30,7 +29,6 @@ public class Juego {
 	public Juego() {
 		super();
 	}
-
 
 	/**
 	 * Constructor de la clase Juego
@@ -52,7 +50,6 @@ public class Juego {
 		this.ventas = ventas;
 	}
 
-	
 	/**
 	 * Método getter del atributo nombre
 	 *
@@ -62,16 +59,14 @@ public class Juego {
 		return nombre;
 	}
 
-	
 	/**
 	 * Método setter del atributo nombre
 	 *
-	 * @param nombre to set nombre 
+	 * @param nombre to set nombre
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 
 	/**
 	 * Método getter del atributo fecha
@@ -82,16 +77,14 @@ public class Juego {
 		return fecha;
 	}
 
-
 	/**
 	 * Método setter del atributo fecha
 	 *
-	 * @param fecha to set fecha 
+	 * @param fecha to set fecha
 	 */
 	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
-
 
 	/**
 	 * Método getter del atributo editor
@@ -102,16 +95,14 @@ public class Juego {
 		return editor;
 	}
 
-
 	/**
 	 * Método setter del atributo editor
 	 *
-	 * @param editor to set editor 
+	 * @param editor to set editor
 	 */
 	public void setEditor(Editor editor) {
 		this.editor = editor;
 	}
-
 
 	/**
 	 * Método getter del atributo genero
@@ -122,16 +113,14 @@ public class Juego {
 		return genero;
 	}
 
-
 	/**
 	 * Método setter del atributo genero
 	 *
-	 * @param genero to set genero 
+	 * @param genero to set genero
 	 */
 	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
-
 
 	/**
 	 * Método getter del atributo plataforma
@@ -142,16 +131,14 @@ public class Juego {
 		return plataforma;
 	}
 
-
 	/**
 	 * Método setter del atributo plataforma
 	 *
-	 * @param plataforma to set plataforma 
+	 * @param plataforma to set plataforma
 	 */
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
-
 
 	/**
 	 * Método getter del atributo ventas
@@ -162,40 +149,36 @@ public class Juego {
 		return ventas;
 	}
 
-
 	/**
 	 * Método setter del atributo ventas
 	 *
-	 * @param ventas to set ventas 
+	 * @param ventas to set ventas
 	 */
 	public void setVentas(Double ventas) {
 		this.ventas = ventas;
 	}
-	
 
-    /**
-     * Metodo para crear un nuevo Juego pidiendo los valores por teclado
-     */
-    public void crearJuego() {
+	/**
+	 * Metodo para crear un nuevo Juego pidiendo los valores por teclado
+	 */
+	public void crearJuego() {
 
-        try {
-            this.nombre = Teclado.tecladoString("Introduce el nombre del Juego");
-            this.fecha = LocalDate.of(Teclado.tecladoInt("Fecha de lanzamiento. Introduce el año "),
-            		Teclado.tecladoInt("Introduce el mes "),
-            		Teclado.tecladoInt("Introduce el día "));       	
-            Genero.mostrarGenero();
-            this.genero= Genero.dimeGenero(Teclado.tecladoInt());
-            Plataforma.mostrarPlataforma();
-            this.plataforma= Plataforma.dimePlataforma(Teclado.tecladoInt());
-            Editor.mostrarEditor();
-            this.editor= Editor.dimeEditor(Teclado.tecladoInt());
-            this.ventas=Teclado.tecladoDouble("Introduce el numero de ventas");
+		try {
+			this.nombre = Teclado.tecladoString("Introduce el nombre del Juego");
+			this.fecha = LocalDate.of(Teclado.tecladoInt("Fecha de lanzamiento. Introduce el año "),
+					Teclado.tecladoInt("Introduce el mes "), Teclado.tecladoInt("Introduce el día "));
+			Genero.mostrarGenero();
+			this.genero = Genero.dimeGenero(Teclado.tecladoInt());
+			Plataforma.mostrarPlataforma();
+			this.plataforma = Plataforma.dimePlataforma(Teclado.tecladoInt());
+			Editor.mostrarEditor();
+			this.editor = Editor.dimeEditor(Teclado.tecladoInt());
+			this.ventas = Teclado.tecladoDouble("Introduce el numero de ventas");
 
-        } catch (Exception e) {
-            e.getStackTrace();
-        }
-    }
-
+		} catch (Exception e) {
+			e.getStackTrace();
+		}
+	}
 
 	/**
 	 * Implementación/Sobrescritura del método toString
@@ -207,7 +190,5 @@ public class Juego {
 		return "Juego [nombre=" + nombre + ", fecha=" + fecha + ", editor=" + editor + ", genero=" + genero
 				+ ", plataforma=" + plataforma + ", ventas=" + ventas + "]";
 	}
-
-	  
 
 }
