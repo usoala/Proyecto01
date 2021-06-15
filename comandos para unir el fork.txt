@@ -20,6 +20,10 @@ Trabajando
 - git push origin
 
 -desde github contribute -> open pull request
-	
+
+Trabajar con ramas
+
+- git checkout -b nombredelaramaacrear
+
 
 	
