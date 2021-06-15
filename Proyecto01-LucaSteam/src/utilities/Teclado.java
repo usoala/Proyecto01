@@ -5,8 +5,7 @@ import java.util.Scanner;
 /**
  * @ClassName Teclado
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author Usoa Larrarte
  *
  * @date 15 jun. 2021
  * 
@@ -14,20 +13,20 @@ import java.util.Scanner;
  */
 
 public class Teclado {
-	
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
+	 * 
 	 * @return captura del String leído
 	 * @throws Exception
 	 */
 	public static String tecladoString() throws Exception {
 		return new Scanner(System.in).next();
 	}
-	
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
+	 * 
 	 * @param mensaje
 	 * @return captura del String leído
 	 * @throws Exception
@@ -36,19 +35,20 @@ public class Teclado {
 		System.out.println(mensaje);
 		return tecladoString();
 	}
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
 	 * 
 	 * @return captura del int leído
 	 * @throws Exception
 	 */
-	public static int tecladoInt() throws Exception{
+	public static int tecladoInt() throws Exception {
 		return new Scanner(System.in).nextInt();
 	}
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
+	 * 
 	 * @param mensaje
 	 * @return captura del int leído
 	 * @throws Exception
@@ -57,7 +57,7 @@ public class Teclado {
 		System.out.println(mensaje);
 		return tecladoInt();
 	}
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
 	 * 
@@ -67,9 +67,10 @@ public class Teclado {
 	public static double tecladoDouble() throws Exception {
 		return new Scanner(System.in).nextDouble();
 	}
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
+	 * 
 	 * @param mensaje
 	 * @return captura del double leído
 	 * @throws Exception
@@ -88,9 +89,10 @@ public class Teclado {
 	public static String tecladoLinea() throws Exception {
 		return new Scanner(System.in).nextLine();
 	}
-	
+
 	/**
 	 * Método estático de lectura de datos del teclado
+	 * 
 	 * @param mensaje
 	 * @return captura del String leído (captura línea entera)
 	 * @throws Exception
