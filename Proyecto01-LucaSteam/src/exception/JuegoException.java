@@ -3,8 +3,6 @@ package exception;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 /**
  * @ClassName JuegoException
  *
@@ -104,14 +102,6 @@ public class JuegoException extends Exception {
 		Logger.getLogger(JuegoException.class.getName()).log(level, null, super.getMessage());
 		return super.getMessage();
 		
-	}
-	
-	
-
-	
-	
-
-
-	
+	}	
 
 }
