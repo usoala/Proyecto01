@@ -208,6 +208,4 @@ public class Juego {
 				+ ", plataforma=" + plataforma + ", ventas=" + ventas + "]";
 	}
 
-	  
-
 }
