@@ -6,7 +6,8 @@ import exception.JuegoException;
 import model.Juego;
 
 /**
- * @ClassName ServiciosJuegoImpl
+ * @ClassName ServiciosJuego
+ * Implementación de la Interface ServiciosJuego
  *
  * @author María Castro, Patricia García, Usoa Larrarte,
  * Jennifer Pérez y Sara Silvo
@@ -21,7 +22,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	
 
 	/**
-	 * Implementación/Sobrescritura del método altaJuego
+	 * Implementación del método altaJuego
 	 *
 	 * @return 
 	 * @throws JuegoException
@@ -33,7 +34,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	}
 	
 	/**
-	 * Implementación/Sobrescritura del método altaJuego
+	 * Sobrescritura del método altaJuego
 	 *
 	 * @param juego
 	 * @return 
@@ -41,6 +42,14 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 */
 	public boolean altaJuego(Juego juego) throws JuegoException {
 		return catalogo.altaJuego(catalogo.siguienteId(), juego);
+	}
+	
+	/**
+	 * Implementación del método listarJuegos
+	 *
+	 */
+	public void listarJuegos() {
+		catalogo.listarJuegos();
 	}
 
 }
