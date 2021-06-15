@@ -3,14 +3,12 @@ package model;
 /**
  * @ClassName Editor
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author María Castro
  *
  * @date 15 jun. 2021
  * 
  * @version 1.0
  */
-
 public enum Editor {
 	
 	_505GAMES("505 Games"), _989STUDIOS("989 Studios"), ACCLAIM_ENTERTAINMENT("Acclaim Entertainment"), 

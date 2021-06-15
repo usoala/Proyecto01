@@ -3,8 +3,7 @@ package gui;
 /**
  * @ClassName Menu
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author María Castro
  *
  * @date 15 jun. 2021
  * 
@@ -21,6 +20,8 @@ public class Menu {
 	        System.out.println("************************************************");
 	        System.out.println("*  Por favor, escoge una opcion: ");
 	        System.out.println("*    1.-Dar de alta un juego");
+	        System.out.println("*    2.-Listar juegos");
+	        System.out.println("*    ");
 	        System.out.println("************************************************");
 	        System.out.println(" ");
 	        System.out.print(">> ");
