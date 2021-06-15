@@ -1,13 +1,14 @@
 package dao;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import model.Juego;
 import exception.JuegoException;
 
 /**
  * @ClassName CatalogoJuegosImpl
- * Implementación de la Interface CátalogoJuegos
+ * Implementación de la Interface CatalogoJuegos
  * 
  * @author María Castro, Patricia García, Usoa Larrarte,
  * Jennifer Pérez y Sara Silvo
@@ -51,7 +52,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	}
 	
 	/**
-	 * Implementación/Sobrescritura del método altaJuego
+	 * Implementación del método altaJuego
 	 * 
 	 * Da de alta un juego si su ID no está repetido en el catálogo
 	 * Si el ID existe en el catalogo, lanza una excepción
@@ -62,7 +63,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego(Integer id, Juego juego) throws JuegoException {
-		if (catalogo.containsKey(juego)) {
+		if (catalogo.containsKey(id)) {
 			throw new JuegoException("No se puede dar de alta el juego. El ID está repetido. ", 2);
 		} else {
 			catalogo.put(id, juego);
@@ -71,7 +72,22 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	}
 	
 	/**
-	 * Implementación/Sobrescritura del método siguienteId
+	 * Implementación del método listarJuegos
+	 * Lista los juegos del catalogo
+	 *
+	 */
+	public void listarJuegos() {
+		Integer key;
+		Iterator<Integer> juegos = catalogo.keySet().iterator();
+		System.out.println(" Listado de juegos en Catálogo ");
+		while (juegos.hasNext()) {
+			key = juegos.next();
+			System.out.println("(" + key + "): " + catalogo.get(key));
+		}
+	}
+	
+	/**
+	 * Implementación del método siguienteId
 	 * 
 	 * Busca el último ID existente en el catálogo y devuelve el entero siguiente
 	 *

@@ -16,5 +16,6 @@ public interface ServiciosJuego {
 	
 	public boolean altaJuego() throws JuegoException;
 	public boolean altaJuego(Juego juego) throws JuegoException;
+	public void listarJuegos();
 
 }
