@@ -1,32 +1,24 @@
 package control;
 
+/**
+ * @ClassName Main
+ *
+ * @author María Castro, Patricia García, Usoa Larrarte,
+ * Jennifer Pérez y Sara Silvo
+ *
+ * @date 15 jun. 2021
+ * 
+ * @version 1.0
+ */
+
 public class Main {
 
-	public static void main(String[] args) {
-
-		
-		String LiarlaParda = new String();
-		System.out.println("LiarlaParda");
-
-
-
-		// TODO Auto-generated method stub
-
-//holi 
-
-		
-		// comentariosara
-
+	/**
+	 * Método inicio de la aplicación
+	 * @param args
+	 */
 	
-		System.out.println("Prueba git. ");
-		System.out.println(" ");
-		System.out.println("Prueba para git. ");
-
-
-
-		//Comentario MariaC
-		
-		//Imprimir.Maria();
+	public static void main(String[] args) {
 
 	}
 
