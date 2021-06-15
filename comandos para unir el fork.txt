@@ -19,5 +19,7 @@ Trabajando
 - git commit -m "descripcion avance"
 - git push origin
 
--desde github contribute -> pull request
-		
+-desde github contribute -> open pull request
+	
+
+	
