@@ -1,5 +1,8 @@
 package dao;
 
+import exception.JuegoException;
+import model.Juego;
+
 /**
  * @ClassName CatalogoJuegos
  *
@@ -12,7 +15,7 @@ package dao;
  */
 public interface CatalogoJuegos {
 	
-	public boolean altaJuego(Integer id, Juego juego);
+	public boolean altaJuego(Integer id, Juego juego) throws JuegoException;
 	
 	public Integer siguienteId();
 

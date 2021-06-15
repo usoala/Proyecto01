@@ -1,4 +1,6 @@
 package service;
+import exception.JuegoException;
+import model.Juego;
 
 /**
  * @ClassName ServiciosJuego

@@ -7,7 +7,8 @@ import exception.JuegoException;
 
 /**
  * @ClassName CatalogoJuegosImpl
- *
+ * Implementación de la Interface CátalogoJuegos
+ * 
  * @author María Castro, Patricia García, Usoa Larrarte,
  * Jennifer Pérez y Sara Silvo
  *
@@ -17,7 +18,6 @@ import exception.JuegoException;
  */
 public class CatalogoJuegosImpl implements CatalogoJuegos {
 	
-	//Código, Juego
 	/**
 	 * Atributo catalogo
 	 * 
@@ -25,7 +25,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	private Map<Integer, Juego> catalogo;
 	
 	/**
-	 * Constructor de la clase CatalogoJuegosImpl
+	 * Constructor de la clase CatalogoJuegos
 	 *
 	 */
 	public CatalogoJuegosImpl() {
@@ -52,15 +52,18 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	
 	/**
 	 * Implementación/Sobrescritura del método altaJuego
+	 * 
+	 * Da de alta un juego si su ID no está repetido en el catálogo
+	 * Si el ID existe en el catalogo, lanza una excepción
 	 *
 	 * @param id
 	 * @param juego
-	 * @return
+	 * @return boolean
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego(Integer id, Juego juego) throws JuegoException {
 		if (catalogo.containsKey(juego)) {
-			throw new JuegoException("No se puede dar de alta el juego. El ID está repetido. ");
+			throw new JuegoException("No se puede dar de alta el juego. El ID está repetido. ", 2);
 		} else {
 			catalogo.put(id, juego);
 			return true;
@@ -69,8 +72,10 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	
 	/**
 	 * Implementación/Sobrescritura del método siguienteId
+	 * 
+	 * Busca el último ID existente en el catálogo y devuelve el entero siguiente
 	 *
-	 * @return
+	 * @return maxID+1
 	 */
 	public Integer siguienteId() {
 		Integer maxId = catalogo.entrySet().stream()
@@ -79,7 +84,5 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		.get();
 		return maxId+1;
 	}
-
-
 
 }

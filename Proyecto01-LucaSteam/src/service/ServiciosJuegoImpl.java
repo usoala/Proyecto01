@@ -5,9 +5,6 @@ import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
 import model.Juego;
 
-import java.util.Map;
-import java.util.HashMap;
-
 /**
  * @ClassName ServiciosJuegoImpl
  *
@@ -26,7 +23,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	/**
 	 * Implementación/Sobrescritura del método altaJuego
 	 *
-	 * @return
+	 * @return 
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego() throws JuegoException {
@@ -39,7 +36,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 * Implementación/Sobrescritura del método altaJuego
 	 *
 	 * @param juego
-	 * @return
+	 * @return 
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego(Juego juego) throws JuegoException {
