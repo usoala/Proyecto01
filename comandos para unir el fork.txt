@@ -13,7 +13,7 @@ Inicio
 
 Trabajando
 
-- git pull upstream
+- git pull upstream main
 
 - git add .
 - git commit -m "descripcion avance"
