@@ -3,24 +3,22 @@ package exception;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 /**
  * @ClassName JuegoException
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author María Castro, Patricia García, Usoa Larrarte, Jennifer Pérez y Sara
+ *         Silvo
  *
  * @date 15 jun. 2021
  * 
  * @version 1.0
  */
 public class JuegoException extends Exception {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private Level level;
-	
+
 	// 1: ERROR
 	// 2: WARNING
 	// 3: INFO
@@ -31,7 +29,7 @@ public class JuegoException extends Exception {
 	 */
 	public JuegoException() {
 	}
-	
+
 	/**
 	 * Constructor de la clase JuegoException
 	 *
@@ -59,7 +57,7 @@ public class JuegoException extends Exception {
 	public JuegoException(String message, Throwable cause) {
 		super(message, cause);
 	}
-	
+
 	/**
 	 * Constructor de la clase JuegoException
 	 *
@@ -69,12 +67,12 @@ public class JuegoException extends Exception {
 	public JuegoException(String message, int tipo) {
 		super(message);
 		setLevel(tipo);
-	}	
+	}
 
 	/**
 	 * Asigna nivel de importancia del error (SEVERE, WARNING, INFO)
-	 *   
-	 * @param tipo       
+	 * 
+	 * @param tipo
 	 */
 	public void setLevel(int tipo) {
 
@@ -103,15 +101,7 @@ public class JuegoException extends Exception {
 	public String toString() {
 		Logger.getLogger(JuegoException.class.getName()).log(level, null, super.getMessage());
 		return super.getMessage();
-		
+
 	}
-	
-	
-
-	
-	
-
-
-	
 
 }
