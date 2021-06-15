@@ -27,65 +27,6 @@ public class Juego {
 	}
 
 
-	public String getNombre() {
-		return nombre;
-	}
-
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-
-	public LocalDate getFecha() {
-		return fecha;
-	}
-
-
-	public void setFecha(LocalDate fecha) {
-		this.fecha = fecha;
-	}
-
-
-	public Editor getEditor() {
-		return editor;
-	}
-
-
-	public void setEditor(Editor editor) {
-		this.editor = editor;
-	}
-
-
-	public Genero getGenero() {
-		return genero;
-	}
-
-
-	public void setGenero(Genero genero) {
-		this.genero = genero;
-	}
-
-
-	public Plataforma getPlataforma() {
-		return plataforma;
-	}
-
-
-	public void setPlataforma(Plataforma plataforma) {
-		this.plataforma = plataforma;
-	}
-
-
-	public Double getVentas() {
-		return ventas;
-	}
-
-
-	public void setVentas(Double ventas) {
-		this.ventas = ventas;
-	}
-
 
 	@Override
 	public String toString() {
