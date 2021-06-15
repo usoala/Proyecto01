@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#PROYEC-1] Yo como administrador quiero dar de alta un juego nuevo</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://lucaticgrupo02.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [PROYEC-1]&nbsp;<a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-1">Yo como administrador quiero dar de alta un juego nuevo</a>
+            <span class="subText">
+               Creada: 14/jun/21                   &nbsp;Actualizada: 14/jun/21
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Estado:</b></td>
+        <td width="80%">Tareas por hacer</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Proyecto:</b></td>
+        <td width="80%"><a href="https://lucaticgrupo02.atlassian.net/secure/BrowseProject.jspa?id=10000">Proyecto1</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Componentes:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versiones afectadas:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versiones corregidas:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Tipo:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Historia
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Prioridad:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Informador:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="604b35d179f9a9007011729c"
+                id="word_reporter_604b35d179f9a9007011729c"
+                href="https://lucaticgrupo02.atlassian.net/secure/ViewProfile.jspa?accountId=604b35d179f9a9007011729c">
+                    Usoa Larrarte
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Responsable:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    sin asignar
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolución:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Sin resolver
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votos:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Etiquetas:</b>
+        </td>
+        <td id="labels-10000-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Ninguno
+                    </td>
+    </tr>
+    
+    	<tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Estimación Restante:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Estimación Restante:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Tiempo empleado:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Tiempo Trabajado:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Estimación original:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Estimación original:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+    
+
+
+<tr><td bgcolor="#f0f0f0" width="20%" valign="top"><b>Subtareas:</b></td>
+    <td bgcolor="#ffffff" valign="top">
+        <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr bgcolor="#f0f0f0">
+                <td>
+                    <b>Clave</b><br/>
+                </td>
+                <td>
+                    <b>Resumen</b><br/>
+                </td>
+                <td>
+                    <b>Tipo</b><br/>
+                </td>
+                <td>
+                    <b>Estado</b><br/>
+                </td>
+                <td>
+                    <b>Responsable</b><br/>
+                </td>
+            </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-14">PROYEC-14</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-14">Crear estructura del proyecto en eclipse</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-15">PROYEC-15</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-15">Crear repositorio github</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-16">PROYEC-16</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-16">Investigar lectura archivo csv</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-17">PROYEC-17</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-17">Crear entidad JUEGO</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-18">PROYEC-18</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-18">Investigar pruebas unitarias</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-19">PROYEC-19</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-19">Crear entidad EDITOR</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-20">PROYEC-20</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-20">Crear entidad PLATAFORMA</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-21">PROYEC-21</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-21">Crear entidad GENERO</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-22">PROYEC-22</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-22">Crear método altaJuego(Integer id, Ju...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-23">PROYEC-23</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-23">Crear método serializarCatalogoJuegos...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-24">PROYEC-24</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-24">Crear método deSerializarCatalogoJueg...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-25">PROYEC-25</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-25">Crear método leerCSV() en la clase Ca...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-26">PROYEC-26</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-26">Documentar el método en todas las capas</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-27">PROYEC-27</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-27">Realizar la prueba unitaria testAltaJ...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-28">PROYEC-28</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-28">Realizar la prueba unitaria testAnter...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-29">PROYEC-29</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-29">Realizar la prueba unitaria testPlata...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-30">PROYEC-30</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-30">Seleccionar muestra datos CSV</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-31">PROYEC-31</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-31">Implementar el método altaJuego() en ...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-32">PROYEC-32</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-32">Implementar el método serializarCatal...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-33">PROYEC-33</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-33">Implementar el método deSerializarCat...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-34">PROYEC-34</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-34">Implementar el método leerCSV() en la...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-35">PROYEC-35</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-35">Crear clase LucaSteam en capa control</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-36">PROYEC-36</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-36">Implementar el método altaJuego() en ...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-37">PROYEC-37</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-37">Crear clase Menu en la capa gui</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-38">PROYEC-38</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-38">Incluir opción alta juego en la clase...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-40">PROYEC-40</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-40">Recopilar documentación colaborativa</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-41">PROYEC-41</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-41">Incluir método serializarCatalogoJueg...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-42">PROYEC-42</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-42">Incluir método deSerializarCatalogoJu...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-43">PROYEC-43</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-43">Incluir método leerCSV() en clase Luc...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-44">PROYEC-44</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-44">Crear clase JuegosException para exce...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-78">PROYEC-78</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-78">Incluir opción guardado en la clase Menu</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-79">PROYEC-79</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-79">Incluir opción carga datos en la clas...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                    </table>
+    </td>
+</tr>
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10020-10000-value" class="value" bgcolor="#ffffff" width="80%">Tablero Sprint 1</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-10000-value" class="value" bgcolor="#ffffff" width="80%">      0|hzzzzz:
+  </td>
+            </tr>
+            </table>
+
+
+Generado a las Tue Jun 15 06:21:50 UTC 2021 por Usoa Larrarte usando JIRA 1001.0.0-SNAPSHOT#100166-sha1:f329a465d8d5e592711a8dc43461748904c59022.
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#PROYEC-45] Yo como administrador quiero listar los juegos</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://lucaticgrupo02.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [PROYEC-45]&nbsp;<a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-45">Yo como administrador quiero listar los juegos</a>
+            <span class="subText">
+               Creada: 14/jun/21                   &nbsp;Actualizada: 14/jun/21
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Estado:</b></td>
+        <td width="80%">Tareas por hacer</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Proyecto:</b></td>
+        <td width="80%"><a href="https://lucaticgrupo02.atlassian.net/secure/BrowseProject.jspa?id=10000">Proyecto1</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Componentes:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versiones afectadas:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versiones corregidas:</b></td>
+            <td>
+                            Ninguno
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Tipo:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Historia
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Prioridad:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Informador:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="604b35d179f9a9007011729c"
+                id="word_reporter_604b35d179f9a9007011729c"
+                href="https://lucaticgrupo02.atlassian.net/secure/ViewProfile.jspa?accountId=604b35d179f9a9007011729c">
+                    Usoa Larrarte
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Responsable:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    sin asignar
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolución:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Sin resolver
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votos:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Etiquetas:</b>
+        </td>
+        <td id="labels-10044-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Ninguno
+                    </td>
+    </tr>
+    
+    	<tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Estimación Restante:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Estimación Restante:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Tiempo empleado:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Tiempo Trabajado:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Estimación original:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Estimación original:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Desconocido
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+    
+
+
+<tr><td bgcolor="#f0f0f0" width="20%" valign="top"><b>Subtareas:</b></td>
+    <td bgcolor="#ffffff" valign="top">
+        <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr bgcolor="#f0f0f0">
+                <td>
+                    <b>Clave</b><br/>
+                </td>
+                <td>
+                    <b>Resumen</b><br/>
+                </td>
+                <td>
+                    <b>Tipo</b><br/>
+                </td>
+                <td>
+                    <b>Estado</b><br/>
+                </td>
+                <td>
+                    <b>Responsable</b><br/>
+                </td>
+            </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-54">PROYEC-54</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-54">Crear método getJuegos():Map&lt;Juego&gt; e...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-58">PROYEC-58</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-58">Documentar el método en todas las capas</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-59">PROYEC-59</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-59">Realizar la prueba unitaria testLista...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-60">PROYEC-60</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-60">Realizar la prueba unitaria testLista...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-64">PROYEC-64</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-64">Implementar método getJuegos():Map&lt;Ju...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-70">PROYEC-70</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-70">Implementar método getJuegos():Map&lt;Ju...</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-72">PROYEC-72</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-72">Recopilar documentación colaborativa</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-77">PROYEC-77</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://lucaticgrupo02.atlassian.net/browse/PROYEC-77">Incluir opción listado en la clase Menu</a>
+                    </td>
+                    <td>
+                        Subtarea
+                    </td>
+                    <td>
+                        Tareas por hacer
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                    </table>
+    </td>
+</tr>
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10020-10044-value" class="value" bgcolor="#ffffff" width="80%">Tablero Sprint 1</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-10044-value" class="value" bgcolor="#ffffff" width="80%">      0|i0009j:
+  </td>
+            </tr>
+            </table>
+
+
+Generado a las Tue Jun 15 06:21:57 UTC 2021 por Usoa Larrarte usando JIRA 1001.0.0-SNAPSHOT#100166-sha1:f329a465d8d5e592711a8dc43461748904c59022.
+
+</body>
+</html>
