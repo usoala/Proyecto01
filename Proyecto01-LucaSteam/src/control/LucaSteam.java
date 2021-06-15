@@ -1,8 +1,10 @@
 package control;
 
+
 import gui.Menu;
 import gui.MenuCargaCatalogo;
 import service.ServiciosJuego;
+import service.ServiciosJuegoImpl;
 import utilities.Teclado;
 
 /**
@@ -22,13 +24,13 @@ public class LucaSteam {
 	 * Instancio servicios para poder usarla. IMPORTAR
 	 * Atributo servicios
 	 */
-	private ServiciosJuego servicios = new ServiciosJuegoImpl;
+	private ServiciosJuego servicios = new ServiciosJuegoImpl();
 	
 	/**
 	 * Maria.
 	 * Método para inicializar el arranque del menú
 	 * Muestra menú siempre que la booleana sea true. Esta se actualiza en el método seleccionOpciones()
-	 */
+	 *//*
 	public void startLucaSteam() {
 		//Menú inicial de carga de Catálogo
 		boolean continuaMenu1 = true;
@@ -45,8 +47,8 @@ public class LucaSteam {
 			continuaMenu2 = this.seleccionOpciones();
 		} while(continuaMenu2);
 		System.out.println(" **FIN DE LA SESIÓN** ");
-	}
-	
+	}*/
+	/*
 	public boolean opcionesMenuCarga() {
 		boolean sigueMenu1 = true;
 		try {
@@ -70,13 +72,14 @@ public class LucaSteam {
             System.out.println("error: " + e.toString());
         }
         return sigueMenu;
-    }
+    }*/
 	
 	/**
 	 * Maria.
 	 * Método para mostrar las dos opciones de menu
 	 * @return sigueMenu
 	 */
+	/*
 	public boolean seleccionOpciones() {
 		boolean sigueMenu = true;
 		try {
@@ -94,7 +97,7 @@ public class LucaSteam {
             System.out.println("error: " + e.toString());
         }
         return sigueMenu;
-    }
+    }*/
 
 }
 
