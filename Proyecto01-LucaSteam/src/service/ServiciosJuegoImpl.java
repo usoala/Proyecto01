@@ -66,10 +66,20 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 
 	/**
 	 * Implementación del método listarJuegos
+	 * @throws JuegoException 
 	 *
 	 */
-	public void listarJuegos() {
-		catalogo.listarJuegos();
+	public void listarJuegos() throws JuegoException {
+		catalogo.listarJuegos() ;
+	}
+	
+	/**
+	 * Implementación del método listarJuegosSigloXX
+	 * @throws JuegoException 
+	 *
+	 */
+	public void listarJuegosSigloXX() throws JuegoException {
+		catalogo.listarJuegosSigloXX();
 	}
 
 	/**
