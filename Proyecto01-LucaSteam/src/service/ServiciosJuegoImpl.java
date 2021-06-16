@@ -42,5 +42,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	public boolean altaJuego(Juego juego) throws JuegoException {
 		return catalogo.altaJuego(catalogo.siguienteId(), juego);
 	}
+	
+	
 
 }

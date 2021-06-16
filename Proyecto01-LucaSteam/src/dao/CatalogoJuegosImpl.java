@@ -1,7 +1,11 @@
 package dao;
 
+import java.io.File;
+
 import java.util.HashMap;
 import java.util.Map;
+
+
 import model.Juego;
 import exception.JuegoException;
 
@@ -84,5 +88,27 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		.get();
 		return maxId+1;
 	}
+
+	
+	public void serializarCatalogoJuegosImpl(String fichero) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	public void deSerializarCatalogoJuegosImpl(String fichero) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+
+
+	
+
+	
 
 }

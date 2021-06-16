@@ -18,5 +18,9 @@ public interface CatalogoJuegos {
 	public boolean altaJuego(Integer id, Juego juego) throws JuegoException;
 	
 	public Integer siguienteId();
+	
+	
+	public void serializarCatalogoJuegosImpl(String fichero);
+    public void deSerializarCatalogoJuegosImpl(String fichero);
 
 }
