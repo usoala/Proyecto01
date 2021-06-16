@@ -84,7 +84,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	 * Implementación del método listarJuegos Lista los juegos del catalogo
 	 *
 	 */
-	public void listarJuegos() throws JuegoException{
+	public void listarJuegos() throws JuegoException {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catálogo no tiene registros. ", 3);
 		} else {
@@ -154,10 +154,9 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		}
 	}
 
-
 	/**
-	 * Implementación del método listarJuegosSigloXX
-	 * Muestra los juegos del catalogo del siglo XX (1901-2000)
+	 * Implementación del método listarJuegosSigloXX Muestra los juegos del catalogo
+	 * del siglo XX (1901-2000)
 	 * 
 	 */
 	public void listarJuegosSigloXX() throws JuegoException {
@@ -165,16 +164,23 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 			throw new JuegoException("El catálogo no tiene registros. ", 3);
 		} else {
 			Integer key;
+			int count = 0;
 			Iterator<Integer> juegos = catalogo.keySet().iterator();
-			while(juegos.hasNext()) {
+			while (juegos.hasNext()) {
 				key = juegos.next();
 				if ((1900 < catalogo.get(key).getFecha()) && (catalogo.get(key).getFecha() <= 2000)) {
 					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha());
+					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: "
+							+ catalogo.get(key).getFecha());
+					count++;
 				}
+			}
+			if(count== 0) {
+				throw new JuegoException("No hay ningún juego del Siglo XX", 3);
 			}
 		}
 	}
-	
+
 	/**
 	 * Implementación del método listarJuegosGeneroPlataforma
 	 * 
@@ -182,21 +188,26 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	 *
 	 * @throws JuegoException
 	 * 
-	 * Genera excepciones en caso de que el catalogo esté vacío o no se haya encontrado con ningún 
-	 * juego con genero = PLATAFORM
+	 *                        Genera excepciones en caso de que el catalogo esté
+	 *                        vacío o no se haya encontrado con ningún juego con
+	 *                        genero = PLATAFORM
 	 */
 	public void listarJuegosGeneroPlataforma() throws JuegoException {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catalogo no tiene registros", 3);
 		} else {
-			try {
-				catalogo.entrySet().stream()
+			catalogo.entrySet().stream()
+				.filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
+				.forEach(j -> System.out.println("(" + j.getKey() + "): " + j.getValue()));
+			long count = catalogo.entrySet().stream()
 					.filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
-					.forEach(j-> System.out.println("(" + j.getKey() + "): " + j.getValue()));
-			} catch (Exception e) {
+					.count();
+			if(count== 0) {
 				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}
+				
+				
 		}
 	}
-	
+
 }
