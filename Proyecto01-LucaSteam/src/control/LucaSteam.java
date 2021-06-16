@@ -4,7 +4,6 @@ import gui.Menu;
 import gui.MenuCargaCatalogo;
 import service.ServiciosJuego;
 import service.ServiciosJuegoImpl;
-import exception.JuegoException;
 import utilities.Teclado;
 
 /**
