@@ -1,9 +1,12 @@
 package service;
 
+import java.util.LinkedHashMap;
+
 import dao.CatalogoJuegos;
 import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
 import model.Juego;
+import utilities.LeerFichero;
 
 /**
  * @ClassName ServiciosJuego
@@ -70,6 +73,14 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 */
 	public void listarJuegos() {
 		catalogo.listarJuegos();
+	}
+
+	/**
+	 * Implementación del método leerDatosFichero
+	 * @return
+	 */
+	public LinkedHashMap<Integer, Juego> leerDatosFichero() {
+		return LeerFichero.leerDatosFichero();
 	}
 
 }
