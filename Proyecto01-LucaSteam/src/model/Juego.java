@@ -1,8 +1,6 @@
 package model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-
 import utilities.Teclado;
 
 /**
@@ -15,7 +13,7 @@ import utilities.Teclado;
  * @version 1.0
  */
 
-public class Juego implements Serializable{
+public class Juego implements Serializable {
 	private String nombre;
 	private Integer fecha;
 	private Editor editor;
