@@ -167,13 +167,16 @@ public class Juego implements Serializable{
 		try {
 			this.nombre = Teclado.tecladoString("Introduce el nombre del Juego");
 			this.fecha = Teclado.tecladoInt("Fecha de lanzamiento. Introduce el año ");
+			System.out.println("Seleccione el género");
 			Genero.mostrarGenero();
 			this.genero = Genero.dimeGenero(Teclado.tecladoInt());
+			System.out.println("Seleccione la plataforma");
 			Plataforma.mostrarPlataforma();
 			this.plataforma = Plataforma.dimePlataforma(Teclado.tecladoInt());
+			System.out.println("Seleccione el editor");
 			Editor.mostrarEditor();
 			this.editor = Editor.dimeEditor(Teclado.tecladoInt());
-			this.ventas = Teclado.tecladoDouble("Introduce el numero de ventas");
+			this.ventas = Teclado.tecladoDouble("Introduce el numero de ventas (use la coma decimal)");
 
 		} catch (Exception e) {
 			e.getStackTrace();
