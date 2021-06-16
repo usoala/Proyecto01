@@ -5,16 +5,22 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.HashSet;
+//import java.io.PrintWriter;
+import java.time.LocalDate;
+//import java.util.HashMap;
+//import java.util.HashSet;
 import java.util.LinkedHashMap;
-import java.util.Map.Entry;
+//import java.util.Map.Entry;
 
-import dao.AltaJuego;
 import dao.CatalogoJuegos;
-import dao.Juego;
-import control.LucaSteam;
+import exception.JuegoException;
+import model.Editor;
+import model.Genero;
+import model.Juego;
+import model.Plataforma;
+
+
+
 /**
  * @ClassName LeerFichero
  *
@@ -31,24 +37,25 @@ public class LeerFichero {
 	 * Lee el fichero de entrada (formato .csv) que contiene la coleccion de juegos y guarda cada juego completo
 	 * (rango, nombre, plataforma, ano, genero, editor y ventas Europa) como un elemento en el mapa
 	 */
-	private static final String RUTA = "CSVDatosSelecPorComas.csv";
+	private static final String RUTAFICHERO = "CSVDatosSelecPorComas.csv";
 
 	public static LinkedHashMap<String, Juego> leerDatosFichero() {
 		LinkedHashMap<String, Juego> mapaJuego = new LinkedHashMap<>();
 
-		File archivo = new File(RUTA);
+		File archivo = new File(RUTAFICHERO);
 		FileReader fr = null;
 		try {
-			fr = new FileReader("CSVDatosSelecPorComas.csv");
+			fr = new FileReader(archivo);
 
 			BufferedReader br = new BufferedReader(fr);
 
 			String linea;
 			while ((linea = br.readLine()) != null) {
-				String[] JuegoString = linea.split(",");// convierte cada línea en array separado por las comas 
+				String[] JuegoString = linea.split(";");// convierte cada línea en array separado por comas 
 															
 				Juego AltaJuego = arrayToJuegos(JuegoString);
 				mapaJuego.put(AltaJuego.getNombre().toUpperCase(), AltaJuego);
+				br.close();
 			}
 		} catch (FileNotFoundException e) {
 			
@@ -63,6 +70,7 @@ public class LeerFichero {
 			try {
 				if (null != fr) {
 					fr.close();
+					
 				}
 			} catch (Exception e2) {
 				e2.printStackTrace();
@@ -79,15 +87,16 @@ public class LeerFichero {
 	 * @return altaJuego
 	 */
 	private static Juego arrayToJuegos(String[] juegoString) {
-		Integer rango = Integer.valueOf(juegoString[0].replace(" ", ""));
+		//Integer rango = Integer.valueOf(juegoString[0].replace(" ", ""));
 		String nombre = String.valueOf(juegoString[1].replace(" ", ""));
-		String plataforma = String.valueOf(juegoString[2].replace(" ", ""));
-		Integer ano = Integer.valueOf(juegoString[3].replace(" ", ""));
-		String genero = String.valueOf(juegoString[4].replace(" ", ""));
-		String editor = String.valueOf(juegoString[5].replace(" ", ""));
-		String ventas = String.valueOf(juegoString[6].replace(" ", ""));
-
-		Juego altaJuego = new Juego (rango, nombre, plataforma, ano, genero, editor, ventas);
+		Plataforma plataforma = Plataforma.valueOf(juegoString[2].replace(" ", ""));
+		LocalDate fecha = LocalDate.parse(juegoString[3].replace(" ", ""));
+		Genero genero = Genero.valueOf(juegoString[4].replace(" ", ""));
+		Editor editor = Editor.valueOf(juegoString[5].replace(" ", ""));
+		Double ventas = Double.valueOf(juegoString[6].replace(" ", ""));
+		
+		Juego altaJuego = new Juego (nombre, fecha, editor, genero, plataforma, ventas);
+		//Juego altaJuego = new Juego (rango, nombre, plataforma, ano, genero, editor, ventas);
 
 		return altaJuego;
 	}
@@ -99,8 +108,8 @@ public class LeerFichero {
 	private static String juegoToLine(Juego juego) {
 
 		
-
-		return juego.getRango() + "," + juego.getNombre() + juego.getPlataforma() +  "," + juego.getAno() + "," + juego.getGenero() + "," + juego.getEditor() + "," + juego.getVentas();
+		return juego.getNombre() + juego.getFecha() +  "," + juego.getEditor() + "," + juego.getGenero() + "," + juego.getPlataforma() + "," + juego.getVentas();
+		//return juego.getRango() + "," + juego.getNombre() + juego.getPlataforma() +  "," + juego.getAno() + "," + juego.getGenero() + "," + juego.getEditor() + "," + juego.getVentas();
 
 		
 
@@ -111,7 +120,7 @@ public class LeerFichero {
 	 * @param catalogo
 	 * @throws LucaSteam
 	 */
-	public static void guardarDatosJuego(Catalogo catalogo) throws LucaSteam {
+	public static void guardarDatosJuego(CatalogoJuegos catalogo) throws JuegoException {
 
 //			File fichero = new File(RUTA);
 //			if (fichero.delete()) {
@@ -119,18 +128,18 @@ public class LeerFichero {
 //			}
 
 		FileWriter fichero = null;
-		PrintWriter pw = null;
+		//PrintWriter pw = null;
 		try {
-			fichero = new FileWriter(RUTA);
-			pw = new PrintWriter(fichero);
+			fichero = new FileWriter(RUTAFICHERO);
+			//pw = new PrintWriter(fichero);
 
-			for (Entry<String, Juego> entry : catalogo.getMapaJuegos().entrySet()) {
+		/*	for (Entry<String, Juego> entry : catalogo.getMapaJuegos().entrySet()) {
 				pw.println(juegoToLine(entry.getValue()));
 
-			}
+			}*/ //Hay que crear el getMapaJuegos()
 
 		} catch (Exception e) {
-			throw new LucaSteam("Error al guardarlo en archivo");
+			throw new JuegoException ("Error al guardarlo en archivo");
 		} finally {
 			try {
 				// Aprovechamos el finally para

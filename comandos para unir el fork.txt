@@ -8,8 +8,8 @@ Inicio
 	-unir los forks locales al principal
 
 *desde la carpeta Proyecto01 (la de github)
-*git remote add upstream https://github.com/usoala/Proyecto01.git
-*git remote -v
+  - git remote add upstream https://github.com/usoala/Proyecto01.git
+  - git remote -v (para verificar que aparecen 2 origin y 2 upstream)
 
 Trabajando
 
@@ -21,9 +21,37 @@ Trabajando
 
 -desde github contribute -> open pull request
 
+Metodología de trabajo
+
+Intentar no trabajar en el fichero a la vez, dicho esto:
+
+Si se hace un pull request demasiado complejo para resolverlo en github directamente, se cancelará el pull request.
+La persona a la que se le ha rechazado el pull request realizará un git pull upstream main.
+Si le da conflicto, abrir el eclipse y solucionar el conflicto.
+Add, commit, push y pull request de nuevo.
+
+
 Trabajar con ramas
 
+para crear la rama
 - git checkout -b nombredelaramaacrear
+
+------
+trabajar
+- git pull origin main???
+- git add .  y git commit -m ""
+- git push origin usoa
+- git checkout main
+- git merge usoa
+- si hay conclictos resolverlos y hacer el add y commit
+- git push origin main
+
+------
+para actualizar la rama usoa
+- git checkout usoa
+- git merge main
+- git push origin usoa
+
 
 
 	
