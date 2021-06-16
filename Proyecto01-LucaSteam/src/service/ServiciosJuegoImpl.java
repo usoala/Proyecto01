@@ -94,7 +94,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 *
 	 */
 	public void serializarCatalogoJuegosImpl() {
-		catalogo.serializarCatalogoJuegosImpl("CSVDatosSelecPorComas.csv");
+		catalogo.serializarCatalogoJuegosImpl("CatalogoJuegos.dat");
 
 	}
 
@@ -103,7 +103,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 *
 	 */
 	public void deSerializarCatalogoJuegosImpl() {
-		catalogo.deSerializarCatalogoJuegosImpl("CSVDatosSelecPorComas.csv");
+		catalogo.deSerializarCatalogoJuegosImpl("CatalogoJuegos.dat");
 
 	}
 	
