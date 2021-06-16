@@ -106,5 +106,15 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 		catalogo.deSerializarCatalogoJuegosImpl("CSVDatosSelecPorComas.csv");
 
 	}
+	
+	/**
+	 * Implementación del método listarJuegosGeneroPlataforma
+	 *
+	 * @throws JuegoException
+	 */
+	public void listarJuegosGeneroPlataforma() throws JuegoException{
+		catalogo.listarJuegosGeneroPlataforma();
+	}
+
 
 }

@@ -17,7 +17,7 @@ import utilities.Teclado;
 
 public class Juego implements Serializable{
 	private String nombre;
-	private LocalDate fecha;
+	private Integer fecha;
 	private Editor editor;
 	private Genero genero;
 	private Plataforma plataforma;
@@ -41,7 +41,7 @@ public class Juego implements Serializable{
 	 * @param plataforma
 	 * @param ventas
 	 */
-	public Juego(String nombre, LocalDate fecha, Editor editor, Genero genero, Plataforma plataforma, Double ventas) {
+	public Juego(String nombre, Integer fecha, Editor editor, Genero genero, Plataforma plataforma, Double ventas) {
 		super();
 		this.nombre = nombre;
 		this.fecha = fecha;
@@ -74,7 +74,7 @@ public class Juego implements Serializable{
 	 *
 	 * @return fecha
 	 */
-	public LocalDate getFecha() {
+	public Integer getFecha() {
 		return fecha;
 	}
 
@@ -83,7 +83,7 @@ public class Juego implements Serializable{
 	 *
 	 * @param fecha to set fecha
 	 */
-	public void setFecha(LocalDate fecha) {
+	public void setFecha(Integer fecha) {
 		this.fecha = fecha;
 	}
 
@@ -166,8 +166,7 @@ public class Juego implements Serializable{
 
 		try {
 			this.nombre = Teclado.tecladoString("Introduce el nombre del Juego");
-			this.fecha = LocalDate.of(Teclado.tecladoInt("Fecha de lanzamiento. Introduce el año "),
-					Teclado.tecladoInt("Introduce el mes "), Teclado.tecladoInt("Introduce el día "));
+			this.fecha = Teclado.tecladoInt("Fecha de lanzamiento. Introduce el año ");
 			Genero.mostrarGenero();
 			this.genero = Genero.dimeGenero(Teclado.tecladoInt());
 			Plataforma.mostrarPlataforma();

@@ -23,5 +23,6 @@ public interface ServiciosJuego {
 	public void serializarCatalogoJuegosImpl();
     public void deSerializarCatalogoJuegosImpl();
     public void listarJuegosSigloXX() throws JuegoException;
+    public void listarJuegosGeneroPlataforma() throws JuegoException;
     
 }
