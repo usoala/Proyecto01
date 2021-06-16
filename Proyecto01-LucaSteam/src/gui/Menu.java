@@ -18,12 +18,14 @@ public class Menu {
 	public static void mostrarMenu() {
 		
 	        System.out.println(" ");
-	        System.out.println(" LucaSteam");
+	        System.out.println(" - **LUCASTEAM** - ");
+	        System.out.println(" - Menu Principal - ");
 	        System.out.println(" ");
 	        System.out.println("************************************************");
 	        System.out.println("*  Por favor, escoge una opcion: ");
 	        System.out.println("*    1.-Dar de alta un juego");
 	        System.out.println("*    2.-Listar juegos");
+	        System.out.println("*    0.-Terminar sesion");
 	        System.out.println("************************************************");
 	        System.out.println(" ");
 	        System.out.print(">> ");

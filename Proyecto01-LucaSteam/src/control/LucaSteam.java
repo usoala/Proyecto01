@@ -1,17 +1,18 @@
 package control;
 
 
+import exception.JuegoException;
 import gui.Menu;
 import gui.MenuCargaCatalogo;
 import service.ServiciosJuego;
 import service.ServiciosJuegoImpl;
+import exception.JuegoException;
 import utilities.Teclado;
 
 /**
  * @ClassName LucaSteam
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author María Castro
  *
  * @date 15 jun. 2021
  * 
@@ -20,47 +21,48 @@ import utilities.Teclado;
 public class LucaSteam {
 	
 	/**
-	 * Maria. 
-	 * Instancio servicios para poder usarla. IMPORTAR
-	 * Atributo servicios
+	 * Instancia servicios
 	 */
 	private ServiciosJuego servicios = new ServiciosJuegoImpl();
 	
 	/**
-	 * Maria.
-	 * Método para inicializar el arranque del menú
-	 * Muestra menú siempre que la booleana sea true. Esta se actualiza en el método seleccionOpciones()
-	 *//*
+	 * Método para inicializar el arranque de los menús
+	 * Primero el de inicializar catálogo, después menú principal
+	 */
 	public void startLucaSteam() {
-		//Menú inicial de carga de Catálogo
+		//Menú inicializar Catálogo
 		boolean continuaMenu1 = true;
 		do {
 			MenuCargaCatalogo.mostrarMenuCargaCatalogo();
 			continuaMenu1 = this.opcionesMenuCarga();
 		} while(continuaMenu1);
 	
-		
 		//Menú principal
 		boolean continuaMenu2 = true;
 		do {
 			Menu.mostrarMenu();
-			continuaMenu2 = this.seleccionOpciones();
+			continuaMenu2 = this.opcionesMenuPrincipal();
 		} while(continuaMenu2);
-		System.out.println(" **FIN DE LA SESIÓN** ");
-	}*/
-	/*
+		System.out.println(" **FIN DE LA SESION** ");
+	}
+	
+	/**
+	 * Método que devuelve un booleano en función del valor que el usuario introduce por teclado para
+	 * Menú de Inicializar Catálogo
+	 * @return boolean sigueMenu1
+	 */
 	public boolean opcionesMenuCarga() {
 		boolean sigueMenu1 = true;
 		try {
 			switch(Teclado.tecladoInt()) {
 				case 1:
 					//CARGA DESDE BBDD
-					servicios.deSerializarCatalogo();
+					//servicios.deSerializarCatalogoJuegos();
 					sigueMenu1 = false;
 					break;
 				case 2:
 					//CARGA DESDE FICHERO
-					servicios.leerFichero();
+					//servicios.leerDatosFichero();
 					sigueMenu1 = false;
 					break;
 				case 3:
@@ -71,33 +73,60 @@ public class LucaSteam {
 		}catch (Exception e) {
             System.out.println("error: " + e.toString());
         }
-        return sigueMenu;
-    }*/
+        return sigueMenu1;
+    }
 	
 	/**
-	 * Maria.
-	 * Método para mostrar las dos opciones de menu
+	 * Método que devuelve un booleano en función del valor que el usuario introduce por teclado para
+	 * Menú principal
 	 * @return sigueMenu
 	 */
-	/*
-	public boolean seleccionOpciones() {
-		boolean sigueMenu = true;
+	public boolean opcionesMenuPrincipal() {
+		boolean sigueMenu2 = true;
 		try {
 			switch(Teclado.tecladoInt()) {
 				case 1:
 					//ALTA DE UN JUEGO
-					servicios.altaJuego();
+					//servicios.altaJuego();
 					break;
 				case 2:
 					//LISTAR JUEGOS
-					servicios.listarJuegos();
+					//servicios.listarJuegos();
+					break;
+				case 0:
+					sigueMenu2 = salir();
 					break;
 			}
 		}catch (Exception e) {
             System.out.println("error: " + e.toString());
         }
-        return sigueMenu;
-    }*/
+        return sigueMenu2;
+    }
+	
+	/**
+	 * Método que devuelve un booleano en función del String introducido por teclado para salir del menú
+	 * Permite la opción de guardar
+	 * @return boolean
+	 * @throws Exception
+	 */
+	public boolean salir() throws Exception {
+        String salir = Teclado.tecladoString(" ¿Está seguro?(S/N)");
+        if(salir.toUpperCase().charAt(0) == 'S') {
+        	String guardar = Teclado.tecladoString(" ¿Desea guardar antes de salir?(S/N)");
+        	if(guardar.toUpperCase().charAt(0) == 'S') {
+        		try {
+        			//servicios.serializarCatalogoJuegos();
+        			System.out.println("Los cambios han sido guardados");
+        			
+        		//OJO!!! PONER JuegoException, así solo para PROBAR!!
+        		}catch (Exception e){
+        			e.printStackTrace();
+        			System.out.println("Error: " + e.getMessage());
+        		}
+        	}
+        }
+        return(salir.toUpperCase().charAt(0) != 'S');
+    }
 
 }
 
