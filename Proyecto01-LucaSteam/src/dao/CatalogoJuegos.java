@@ -16,7 +16,8 @@ import model.Juego;
 public interface CatalogoJuegos {
 	
 	public boolean altaJuego(Integer id, Juego juego) throws JuegoException;
-	public void listarJuegos();
+	public void listarJuegos() throws JuegoException;
 	public Integer siguienteId();
+	public void listarJuegosSigloXX() throws JuegoException;
 
 }

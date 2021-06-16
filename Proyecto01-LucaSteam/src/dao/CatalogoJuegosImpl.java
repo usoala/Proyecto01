@@ -76,13 +76,17 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	 * Lista los juegos del catalogo
 	 *
 	 */
-	public void listarJuegos() {
-		Integer key;
-		Iterator<Integer> juegos = catalogo.keySet().iterator();
-		System.out.println(" Listado de juegos en Catálogo ");
-		while (juegos.hasNext()) {
-			key = juegos.next();
-			System.out.println("(" + key + "): " + catalogo.get(key));
+	public void listarJuegos() throws JuegoException{
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catálogo no tiene registros. ", 3);
+		} else {
+			Integer key;
+			Iterator<Integer> juegos = catalogo.keySet().iterator();
+			System.out.println(" Listado de juegos en Catálogo ");
+			while (juegos.hasNext()) {
+				key = juegos.next();
+				System.out.println("(" + key + "): " + catalogo.get(key));
+			}
 		}
 	}
 	
@@ -106,4 +110,25 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		return maxId+1;
 	}
 
+
+	/**
+	 * Implementación del método listarJuegosSigloXX
+	 * Muestra los juegos del catalogo del siglo XX (1901-2000)
+	 * 
+	 */
+	public void listarJuegosSigloXX() throws JuegoException {
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catálogo no tiene registros. ", 3);
+		} else {
+			Integer key;
+			Iterator<Integer> juegos = catalogo.keySet().iterator();
+			while(juegos.hasNext()) {
+				key = juegos.next();
+				if ((1900 < catalogo.get(key).getFecha().getYear()) && (catalogo.get(key).getFecha().getYear()<=2000)) {
+					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha().getYear());
+				}
+			}
+		}
+	}
+	
 }
