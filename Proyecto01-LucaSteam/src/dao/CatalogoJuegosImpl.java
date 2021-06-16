@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import model.Genero;
 import model.Juego;
 import exception.JuegoException;
 
@@ -170,6 +171,30 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 				if ((1900 < catalogo.get(key).getFecha().getYear()) && (catalogo.get(key).getFecha().getYear()<=2000)) {
 					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha().getYear());
 				}
+			}
+		}
+	}
+	
+	/**
+	 * Implementación del método listarJuegosGeneroPlataforma
+	 * 
+	 * Filtra e imprime los juegos por genero = PLATAFORM del catálogo de juegos
+	 *
+	 * @throws JuegoException
+	 * 
+	 * Genera excepciones en caso de que el catalogo esté vacío o no se haya encontrado con ningún 
+	 * juego con genero = PLATAFORM
+	 */
+	public void listarJuegosGeneroPlataforma() throws JuegoException {
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catalogo no tiene registros", 3);
+		} else {
+			try {
+				catalogo.entrySet().stream()
+					.filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
+					.forEach(j-> System.out.println("(" + j.getKey() + "): " + j.getValue()));
+			} catch (Exception e) {
+				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}
 		}
 	}

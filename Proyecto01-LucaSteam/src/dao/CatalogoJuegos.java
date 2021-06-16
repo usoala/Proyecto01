@@ -21,5 +21,6 @@ public interface CatalogoJuegos {
 	public void serializarCatalogoJuegosImpl(String fichero);
 	public void deSerializarCatalogoJuegosImpl(String fichero);
 	public void listarJuegosSigloXX() throws JuegoException;
+	public void listarJuegosGeneroPlataforma() throws JuegoException;
 	
 }
