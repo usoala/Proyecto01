@@ -41,4 +41,11 @@ public class TestOpcionesMenuCarga {
 		boolean booleanDevuelto = lucaSteam.opcionesMenuCarga(opcion);
 		assertFalse(booleanDevuelto);
 	}
+	
+	@Test
+	void testOpcionListaVacia() {
+		logger.info("ejecutando testOpcionListaVacia");
+		Integer opcion = 3;
+		
+	}
 }
