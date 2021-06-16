@@ -20,5 +20,6 @@ public interface ServiciosJuego {
 	public boolean altaJuego(Juego juego) throws JuegoException;
 	public void listarJuegos();
 	public LinkedHashMap<Integer, Juego> leerDatosFichero();
-
+	public void serializarCatalogoJuegosImpl();
+    public void deSerializarCatalogoJuegosImpl();
 }
