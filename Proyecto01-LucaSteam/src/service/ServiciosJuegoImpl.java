@@ -22,11 +22,31 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	
 
 	/**
+	 * Método getter del atributo catalogo
+	 *
+	 * @return catalogo
+	 */
+	public CatalogoJuegos getCatalogo() {
+		return catalogo;
+	}
+
+	/**
+	 * Método setter del atributo catalogo
+	 *
+	 * @param catalogo to set catalogo 
+	 */
+	public void setCatalogo(CatalogoJuegos catalogo) {
+		this.catalogo = catalogo;
+	}
+
+	/**
 	 * Implementación del método altaJuego
 	 *
 	 * @return 
 	 * @throws JuegoException
 	 */
+	
+	
 	public boolean altaJuego() throws JuegoException {
 		Juego juego = new Juego();
 		juego.crearJuego();

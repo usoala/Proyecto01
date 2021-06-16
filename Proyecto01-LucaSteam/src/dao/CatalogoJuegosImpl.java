@@ -94,10 +94,15 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	 * @return maxID+1
 	 */
 	public Integer siguienteId() {
-		Integer maxId = catalogo.entrySet().stream()
-		.max((a,b) -> Integer.compare(a.getKey(), b.getKey()))
-		.map(e-> e.getKey())
-		.get();
+		Integer maxId;
+		if(catalogo.size()==0) {
+			maxId=0;
+		} else {
+			maxId = catalogo.entrySet().stream()
+					.max((a,b) -> Integer.compare(a.getKey(), b.getKey()))
+					.map(e-> e.getKey())
+					.get();
+		}
 		return maxId+1;
 	}
 
