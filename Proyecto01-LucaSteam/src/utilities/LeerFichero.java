@@ -86,11 +86,11 @@ public class LeerFichero {
 	 * @param juegoString      array tipo String: incluye los datos completos de un juego
 	 * @return altaJuego
 	 */
-	private static Juego arrayToJuegos(String[] juegoString) {
+	public static Juego arrayToJuegos(String[] juegoString) {
 		//Integer rango = Integer.valueOf(juegoString[0].replace(" ", ""));
 		String nombre = String.valueOf(juegoString[1].replace(" ", ""));
 		Plataforma plataforma = Plataforma.valueOf(juegoString[2].replace(" ", ""));
-		LocalDate fecha = LocalDate.parse(juegoString[3].replace(" ", ""));
+		Integer fecha = Integer.valueOf(juegoString[3].replace(" ", ""));
 		Genero genero = Genero.valueOf(juegoString[4].replace(" ", ""));
 		Editor editor = Editor.valueOf(juegoString[5].replace(" ", ""));
 		Double ventas = Double.valueOf(juegoString[6].replace(" ", ""));
