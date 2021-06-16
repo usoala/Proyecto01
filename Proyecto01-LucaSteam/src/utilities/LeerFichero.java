@@ -24,8 +24,7 @@ import model.Plataforma;
 /**
  * @ClassName LeerFichero
  *
- * @author María Castro, Patricia García, Usoa Larrarte,
- * Jennifer Pérez y Sara Silvo
+ * @author Jennifer Pérez
  *
  * @date 15 jun. 2021
  * 
@@ -39,8 +38,8 @@ public class LeerFichero {
 	 */
 	private static final String RUTAFICHERO = "CSVDatosSelecPorComas.csv";
 
-	public static LinkedHashMap<String, Juego> leerDatosFichero() {
-		LinkedHashMap<String, Juego> mapaJuego = new LinkedHashMap<>();
+	public static LinkedHashMap<Integer, Juego> leerDatosFichero() {
+		LinkedHashMap<Integer, Juego> mapaJuego = new LinkedHashMap<>();
 
 		File archivo = new File(RUTAFICHERO);
 		FileReader fr = null;
@@ -54,7 +53,8 @@ public class LeerFichero {
 				String[] JuegoString = linea.split(";");// convierte cada línea en array separado por comas 
 															
 				Juego AltaJuego = arrayToJuegos(JuegoString);
-				mapaJuego.put(AltaJuego.getNombre().toUpperCase(), AltaJuego);
+				Integer id = Integer.valueOf(JuegoString[0].replace(" ", ""));
+				mapaJuego.put(id, AltaJuego);
 				br.close();
 			}
 		} catch (FileNotFoundException e) {
@@ -122,7 +122,7 @@ public class LeerFichero {
 	 */
 	public static void guardarDatosJuego(CatalogoJuegos catalogo) throws JuegoException {
 
-//			File fichero = new File(RUTA);
+//			File fichero = new File(RUTAFICHERO);
 //			if (fichero.delete()) {
 //				System.out.println("Fichero eliminado");
 //			}
