@@ -1,4 +1,6 @@
 package service;
+import java.util.LinkedHashMap;
+
 import exception.JuegoException;
 import model.Juego;
 
@@ -17,6 +19,9 @@ public interface ServiciosJuego {
 	public boolean altaJuego() throws JuegoException;
 	public boolean altaJuego(Juego juego) throws JuegoException;
 	public void listarJuegos() throws JuegoException ;
-	public void listarJuegosSigloXX() throws JuegoException;
-
+	public LinkedHashMap<Integer, Juego> leerDatosFichero();
+	public void serializarCatalogoJuegosImpl();
+    public void deSerializarCatalogoJuegosImpl();
+    public void listarJuegosSigloXX() throws JuegoException;
+    
 }
