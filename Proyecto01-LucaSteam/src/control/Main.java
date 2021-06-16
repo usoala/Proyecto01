@@ -1,12 +1,5 @@
 package control;
-
-<<<<<<< HEAD
-public class Main {
-
-	public static void main(String[] args) {
-
-		
-=======
+	
 /**
  * @ClassName Main
  *
@@ -27,7 +20,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 
->>>>>>> b141d2784b405efe1990327aa781c89ae4f06f49
+
 	}
 
 }
