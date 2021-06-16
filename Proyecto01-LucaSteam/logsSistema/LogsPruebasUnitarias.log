@@ -145,3 +145,11 @@
 [ INFO] - TestAltaJuego:51 2021-06-16 10:51:04 - Crear nuevo catalogo y servicios
 [ INFO] - TestAltaJuego:75 2021-06-16 10:51:04 - ejecutando altaCapaServicios()
 [ INFO] - TestAltaJuego:58 2021-06-16 10:51:04 - Fin Test Unitarios AltaJuego
+[ INFO] - TestOpcionesMenuCarga:23 2021-06-16 14:11:00 - Inicio Test Unitarios OpcionesMenuCarga
+[ INFO] - TestOpcionesMenuCarga:28 2021-06-16 14:11:00 - Crear nuevo LucaSteam
+[ INFO] - TestOpcionesMenuCarga:39 2021-06-16 14:11:00 - ejecutando testOpcionCargaCatalogo()
+[ INFO] - TestOpcionesMenuCarga:34 2021-06-16 14:11:00 - Fin Test Unitarios OpcionesMenuCarga
+[ INFO] - TestOpcionesMenuCarga:23 2021-06-16 15:09:13 - Inicio Test Unitarios OpcionesMenuCarga
+[ INFO] - TestOpcionesMenuCarga:28 2021-06-16 15:09:13 - Crear nuevo LucaSteam
+[ INFO] - TestOpcionesMenuCarga:39 2021-06-16 15:09:13 - ejecutando testOpcionCargaCatalogo()
+[ INFO] - TestOpcionesMenuCarga:34 2021-06-16 15:09:13 - Fin Test Unitarios OpcionesMenuCarga
