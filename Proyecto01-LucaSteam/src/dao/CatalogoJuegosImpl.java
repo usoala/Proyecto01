@@ -169,7 +169,6 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 			while (juegos.hasNext()) {
 				key = juegos.next();
 				if ((1900 < catalogo.get(key).getFecha()) && (catalogo.get(key).getFecha() <= 2000)) {
-					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha());
 					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: "
 							+ catalogo.get(key).getFecha());
 					count++;
