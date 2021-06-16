@@ -168,8 +168,8 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 			Iterator<Integer> juegos = catalogo.keySet().iterator();
 			while(juegos.hasNext()) {
 				key = juegos.next();
-				if ((1900 < catalogo.get(key).getFecha().getYear()) && (catalogo.get(key).getFecha().getYear()<=2000)) {
-					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha().getYear());
+				if ((1900 < catalogo.get(key).getFecha()) && (catalogo.get(key).getFecha()<=2000)) {
+					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: " + catalogo.get(key).getFecha());
 				}
 			}
 		}
