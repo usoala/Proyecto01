@@ -145,3 +145,11 @@
 [ INFO] - TestAltaJuego:51 2021-06-16 10:51:04 - Crear nuevo catalogo y servicios
 [ INFO] - TestAltaJuego:75 2021-06-16 10:51:04 - ejecutando altaCapaServicios()
 [ INFO] - TestAltaJuego:58 2021-06-16 10:51:04 - Fin Test Unitarios AltaJuego
+[ INFO] - TestAltaJuego:45 2021-06-16 15:20:16 - Inicio Test Unitarios AltaJuego
+[ INFO] - TestAltaJuego:50 2021-06-16 15:20:16 - Crear nuevo catalogo y servicios
+[ INFO] - TestAltaJuego:62 2021-06-16 15:20:16 - ejecutando altaCapaDatos()
+[ INFO] - TestAltaJuego:50 2021-06-16 15:20:16 - Crear nuevo catalogo y servicios
+[ INFO] - TestAltaJuego:87 2021-06-16 15:20:16 - ejecutando testSiguienteId()
+[ INFO] - TestAltaJuego:50 2021-06-16 15:20:16 - Crear nuevo catalogo y servicios
+[ INFO] - TestAltaJuego:74 2021-06-16 15:20:16 - ejecutando altaCapaServicios()
+[ INFO] - TestAltaJuego:57 2021-06-16 15:20:16 - Fin Test Unitarios AltaJuego

@@ -38,7 +38,7 @@ class TestAltaJuego {
 
 	static CatalogoJuegos catalogo;
 	static ServiciosJuego servicios;
-	Juego juego = new Juego("Prueba", LocalDate.now(), Editor._505GAMES, Genero.ACTION, Plataforma._2600, 0.01);
+	Juego juego = new Juego("Prueba", 2020, Editor._505GAMES, Genero.ACTION, Plataforma._2600, 0.01);
 
 	@BeforeAll
 	static void inicioTest() {
