@@ -2,7 +2,7 @@
 <Configuration>
     <Properties>
         <!-- Por defecto será en C:/ o D:/.. donde se ejecute -->
-        <Property name="log-path">../Proyecto01-LucaSteam/logsSistema</Property>
+        <Property name="log-path">/logsSistema</Property>
     </Properties>
  
     <Appenders>
