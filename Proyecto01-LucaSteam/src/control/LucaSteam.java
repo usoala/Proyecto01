@@ -1,7 +1,5 @@
 package control;
 
-
-import exception.JuegoException;
 import gui.Menu;
 import gui.MenuCargaCatalogo;
 import service.ServiciosJuego;
@@ -31,10 +29,22 @@ public class LucaSteam {
 	 */
 	public void startLucaSteam() {
 		//Menú inicializar Catálogo
+		Integer opcion = 0;
 		boolean continuaMenu1 = true;
 		do {
 			MenuCargaCatalogo.mostrarMenuCargaCatalogo();
-			continuaMenu1 = this.opcionesMenuCarga();
+			boolean opcionBool = true;
+			do {
+				try {
+					opcion = Teclado.tecladoInt();
+					if((opcion==1)||(opcion==2)||(opcion==3)) {
+						opcionBool = false;
+					}	
+				}catch (Exception e) {
+		            System.out.println("error: " + e.toString());
+		        }
+			}while(opcionBool);
+			continuaMenu1 = this.opcionesMenuCarga(opcion);
 		} while(continuaMenu1);
 	
 		//Menú principal
@@ -51,28 +61,27 @@ public class LucaSteam {
 	 * Menú de Inicializar Catálogo
 	 * @return boolean sigueMenu1
 	 */
-	public boolean opcionesMenuCarga() {
+	public boolean opcionesMenuCarga(Integer opcion) {
 		boolean sigueMenu1 = true;
-		try {
-			switch(Teclado.tecladoInt()) {
-				case 1:
-					//CARGA DESDE BBDD
-					//servicios.deSerializarCatalogoJuegos();
-					sigueMenu1 = false;
-					break;
-				case 2:
-					//CARGA DESDE FICHERO
-					//servicios.leerDatosFichero();
-					sigueMenu1 = false;
-					break;
-				case 3:
-					//CATÁLOGO VACÍO
-					sigueMenu1 = false;
-					break;
-			}
-		}catch (Exception e) {
-            System.out.println("error: " + e.toString());
-        }
+		switch(opcion) {
+			case 1:
+				//CARGA DESDE BBDD
+				servicios.deSerializarCatalogoJuegosImpl();
+				System.out.println("El catálogo ha sido inicializado desde base de datos");
+				sigueMenu1 = false;
+				break;
+			case 2:
+				//CARGA DESDE FICHERO
+				servicios.leerDatosFichero();
+				System.out.println("El catálogo ha sido inicializado desde fichero");
+				sigueMenu1 = false;
+				break;
+			case 3:
+				//CATÁLOGO VACÍO
+				System.out.println("El catálogo ha sido inicializado vacío");
+				sigueMenu1 = false;
+				break;
+		}
         return sigueMenu1;
     }
 	
@@ -87,11 +96,19 @@ public class LucaSteam {
 			switch(Teclado.tecladoInt()) {
 				case 1:
 					//ALTA DE UN JUEGO
-					//servicios.altaJuego();
+					servicios.altaJuego();
 					break;
 				case 2:
 					//LISTAR JUEGOS
-					//servicios.listarJuegos();
+					servicios.listarJuegos();
+					break;
+				case 3:
+					//LISTAR JUEGOS GÉNERO PLATAFORMA
+					servicios.listarJuegosGeneroPlataforma();
+					break;
+				case 4:
+					//LISTAR JUEGOS SIGLO XX
+					servicios.listarJuegosSigloXX();
 					break;
 				case 0:
 					sigueMenu2 = salir();
@@ -115,10 +132,8 @@ public class LucaSteam {
         	String guardar = Teclado.tecladoString(" ¿Desea guardar antes de salir?(S/N)");
         	if(guardar.toUpperCase().charAt(0) == 'S') {
         		try {
-        			//servicios.serializarCatalogoJuegos();
+        			servicios.serializarCatalogoJuegosImpl();
         			System.out.println("Los cambios han sido guardados");
-        			
-        		//OJO!!! PONER JuegoException, así solo para PROBAR!!
         		}catch (Exception e){
         			e.printStackTrace();
         			System.out.println("Error: " + e.getMessage());
