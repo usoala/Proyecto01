@@ -25,6 +25,8 @@ public class Menu {
 	        System.out.println("*  Por favor, escoge una opcion: ");
 	        System.out.println("*    1.-Dar de alta un juego");
 	        System.out.println("*    2.-Listar juegos");
+	        System.out.println("*    3.-Listar juegos de genero 'plataforma'");
+	        System.out.println("*    4.-Listar juegos del siglo XX");
 	        System.out.println("*    0.-Terminar sesion");
 	        System.out.println("************************************************");
 	        System.out.println(" ");
