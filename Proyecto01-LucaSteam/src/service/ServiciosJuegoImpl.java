@@ -43,7 +43,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	/**
 	 * Implementación del método altaJuego
 	 *
-	 * @return
+	 * @return valor booleano
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego() throws JuegoException {
@@ -56,7 +56,7 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 * Sobrescritura del método altaJuego
 	 *
 	 * @param juego
-	 * @return
+	 * @return valor booleano
 	 * @throws JuegoException
 	 */
 	public boolean altaJuego(Juego juego) throws JuegoException {

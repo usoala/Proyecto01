@@ -19,20 +19,20 @@ import utilities.Teclado;
  * @version 1.0
  */
 public class LucaSteam {
-	
+
 	static Logger logger = LogManager.getLogger(LucaSteam.class);
-	
+
 	/**
 	 * Instancia servicios
 	 */
 	private ServiciosJuego servicios = new ServiciosJuegoImpl();
-	
+
 	/**
-	 * Método para inicializar el arranque de los menús
-	 * Primero el de inicializar catálogo, después menú principal
+	 * Método para inicializar el arranque de los menús Primero el de inicializar
+	 * catálogo, después menú principal
 	 */
 	public void startLucaSteam() {
-		//Menú inicializar Catálogo
+		// Menú inicializar Catálogo
 		Integer opcion = 0;
 		boolean continuaMenu1 = true;
 		do {
@@ -41,113 +41,115 @@ public class LucaSteam {
 			do {
 				try {
 					opcion = Teclado.tecladoInt();
-					if((opcion==1)||(opcion==2)||(opcion==3)) {
+					if ((opcion == 1) || (opcion == 2) || (opcion == 3)) {
 						opcionBool = false;
 					} else {
 						throw new Exception();
 					}
-				}catch (Exception e) {
-		            logger.error(e.toString());
-		        }
-			}while(opcionBool);
+				} catch (Exception e) {
+					logger.error(e.toString());
+				}
+			} while (opcionBool);
 			continuaMenu1 = this.opcionesMenuCarga(opcion);
-		} while(continuaMenu1);
-	
-		//Menú principal
+		} while (continuaMenu1);
+
+		// Menú principal
 		boolean continuaMenu2 = true;
 		do {
 			Menu.mostrarMenu();
 			continuaMenu2 = this.opcionesMenuPrincipal();
-		} while(continuaMenu2);
+		} while (continuaMenu2);
 		logger.info(" **FIN DE LA SESION** ");
 	}
-	
+
 	/**
-	 * Método que devuelve un booleano en función del valor que el usuario introduce por teclado para
-	 * Menú de Inicializar Catálogo
+	 * Método que devuelve un booleano en función del valor que el usuario introduce
+	 * por teclado para Menú de Inicializar Catálogo
+	 * 
 	 * @return boolean sigueMenu1
 	 */
 	public boolean opcionesMenuCarga(Integer opcion) {
 		boolean sigueMenu1 = true;
-		switch(opcion) {
-			case 1:
-				//CARGA DESDE BBDD
-				servicios.deSerializarCatalogoJuegosImpl();
-				logger.info("El catálogo ha sido inicializado desde base de datos");
-				sigueMenu1 = false;
-				break;
-			case 2:
-				//CARGA DESDE FICHERO
-				servicios.leerDatosFichero();
-				logger.info("El catálogo ha sido inicializado desde fichero");
-				sigueMenu1 = false;
-				break;
-			case 3:
-				//CATÁLOGO VACÍO
-				logger.info("El catálogo ha sido inicializado vacío");
-				sigueMenu1 = false;
-				break;
+		switch (opcion) {
+		case 1:
+			// CARGA DESDE BBDD
+			servicios.deSerializarCatalogoJuegosImpl();
+			logger.info("El catálogo ha sido inicializado desde base de datos");
+			sigueMenu1 = false;
+			break;
+		case 2:
+			// CARGA DESDE FICHERO
+			servicios.leerDatosFichero();
+			logger.info("El catálogo ha sido inicializado desde fichero");
+			sigueMenu1 = false;
+			break;
+		case 3:
+			// CATÁLOGO VACÍO
+			logger.info("El catálogo ha sido inicializado vacío");
+			sigueMenu1 = false;
+			break;
 		}
-        return sigueMenu1;
-    }
-	
+		return sigueMenu1;
+	}
+
 	/**
-	 * Método que devuelve un booleano en función del valor que el usuario introduce por teclado para
-	 * Menú principal
+	 * Método que devuelve un booleano en función del valor que el usuario introduce
+	 * por teclado para Menú principal
+	 * 
 	 * @return sigueMenu
 	 */
 	public boolean opcionesMenuPrincipal() {
 		boolean sigueMenu2 = true;
 		try {
-			switch(Teclado.tecladoInt()) {
-				case 1:
-					//ALTA DE UN JUEGO
-					servicios.altaJuego();
-					break;
-				case 2:
-					//LISTAR JUEGOS
-					servicios.listarJuegos();
-					break;
-				case 3:
-					//LISTAR JUEGOS GÉNERO PLATAFORMA
-					servicios.listarJuegosGeneroPlataforma();
-					break;
-				case 4:
-					//LISTAR JUEGOS SIGLO XX
-					servicios.listarJuegosSigloXX();
-					break;
-				case 0:
-					sigueMenu2 = salir();
-					break;
+			switch (Teclado.tecladoInt()) {
+			case 1:
+				// ALTA DE UN JUEGO
+				servicios.altaJuego();
+				break;
+			case 2:
+				// LISTAR JUEGOS
+				servicios.listarJuegos();
+				break;
+			case 3:
+				// LISTAR JUEGOS GÉNERO PLATAFORMA
+				servicios.listarJuegosGeneroPlataforma();
+				break;
+			case 4:
+				// LISTAR JUEGOS SIGLO XX
+				servicios.listarJuegosSigloXX();
+				break;
+			case 0:
+				sigueMenu2 = salir();
+				break;
 			}
-		}catch (Exception e) {
-            logger.error(e.toString());
-        }
-        return sigueMenu2;
-    }
-	
+		} catch (Exception e) {
+			logger.error(e.toString());
+		}
+		return sigueMenu2;
+	}
+
 	/**
-	 * Método que devuelve un booleano en función del String introducido por teclado para salir del menú
-	 * Permite la opción de guardar
+	 * Método que devuelve un booleano en función del String introducido por teclado
+	 * para salir del menú Permite la opción de guardar
+	 * 
 	 * @return boolean
 	 * @throws Exception
 	 */
 	public boolean salir() throws Exception {
-        String salir = Teclado.tecladoString(" ¿Está seguro?(S/N)");
-        if(salir.toUpperCase().charAt(0) == 'S') {
-        	String guardar = Teclado.tecladoString(" ¿Desea guardar antes de salir?(S/N)");
-        	if(guardar.toUpperCase().charAt(0) == 'S') {
-        		try {
-        			servicios.serializarCatalogoJuegosImpl();
-        			logger.info("Los cambios han sido guardados");
-        		}catch (Exception e){
-        			e.printStackTrace();
-        			logger.error(e.getMessage());
-        		}
-        	}
-        }
-        return(salir.toUpperCase().charAt(0) != 'S');
-    }
+		String salir = Teclado.tecladoString(" ¿Está seguro?(S/N)");
+		if (salir.toUpperCase().charAt(0) == 'S') {
+			String guardar = Teclado.tecladoString(" ¿Desea guardar antes de salir?(S/N)");
+			if (guardar.toUpperCase().charAt(0) == 'S') {
+				try {
+					servicios.serializarCatalogoJuegosImpl();
+					logger.info("Los cambios han sido guardados");
+				} catch (Exception e) {
+					e.printStackTrace();
+					logger.error(e.getMessage());
+				}
+			}
+		}
+		return (salir.toUpperCase().charAt(0) != 'S');
+	}
 
 }
-

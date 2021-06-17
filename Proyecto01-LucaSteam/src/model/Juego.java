@@ -249,6 +249,4 @@ public class Juego implements Serializable {
 		return true;
 	}
 
-	
-
 }

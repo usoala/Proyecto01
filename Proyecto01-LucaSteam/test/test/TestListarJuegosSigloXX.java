@@ -1,6 +1,8 @@
 package test;
 
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.apache.logging.log4j.LogManager;
@@ -50,6 +52,22 @@ public class TestListarJuegosSigloXX {
 	@AfterAll
 	static void finTest() {
 		logger.info("Fin Test Unitarios Listar Juegos del Siglo XX");
+	}
+
+	@Test
+	void listarJuegoSigloXX() {
+		logger.info("Ejecutando listarJuegosSigloXX()");
+		try {
+			catalogo.altaJuego(1, juego);
+		} catch (JuegoException e1) {
+			logger.error(e1.getMessage());
+		}
+		try {
+			catalogo.listarJuegosSigloXX();
+		} catch (Exception e) {
+			System.out.println("error: " + e.toString());
+		}
+		assertTrue(outputStreamCaptor.toString().trim().contains("Juego Siglo XX"));
 	}
 
 	@Test

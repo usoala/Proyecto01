@@ -1,6 +1,5 @@
 package test;
 
-
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
@@ -35,8 +34,7 @@ public class TestListarJuegosGeneroPlataforma {
 	static Logger logger = LogManager.getLogger(TestAltaJuego.class);
 
 	static CatalogoJuegos catalogo;
-	Juego juego = new Juego("Juego Genero Plataform", 2020, "505GAMES", Genero.PLATFORM,
-			Plataforma._2600, 0.01);
+	Juego juego = new Juego("Juego Genero Plataform", 2020, "505GAMES", Genero.PLATFORM, Plataforma._2600, 0.01);
 
 	final PrintStream standardOut = System.out;
 	final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -84,17 +82,16 @@ public class TestListarJuegosGeneroPlataforma {
 		} catch (JuegoException e1) {
 			logger.error(e1.getMessage());
 		}
-		 assertThrows(JuegoException.class, () -> {
-			 catalogo.listarJuegosGeneroPlataforma();
-		    });
-		}
-	
+		assertThrows(JuegoException.class, () -> {
+			catalogo.listarJuegosGeneroPlataforma();
+		});
+	}
+
 	@Test
 	void listarConCatalogoVacio() {
 		logger.info("ejecutando listarConCatalogoVacio()");
-	 assertThrows(JuegoException.class, () -> {
-		 catalogo.listarJuegosGeneroPlataforma();
-	    });
+		assertThrows(JuegoException.class, () -> {
+			catalogo.listarJuegosGeneroPlataforma();
+		});
 	}
 }
-
