@@ -1,6 +1,5 @@
 package test;
 import utilities.LeerFichero;
-import model.Editor;
 import model.Juego;
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -26,8 +25,8 @@ public class TestLeerFichero {
      @Test  
     public void testArrayOk() {
     	logger.info("ejecutando testArrayOk()");
-    	Juego altaJuegoValorEsperado = new Juego ("Wii Sports", 2006, Editor._505GAMES, Genero.ACTION, Plataforma._2600, 29.02);
-		String [] prueba = new String [] {"1", "Wii Sports","Nintendo", "2006", "Wii", "Sports", "29.02"};
+    	Juego altaJuegoValorEsperado = new Juego ("WiiSports", 2006, "Wii", Genero.ROLE_PLAYING, Plataforma._2600, 2.0);
+		String [] prueba = new String [] {"1", "Wii Sports","2600", "2006", "Role-Playing", "Wii", "2.0"};
     	Juego altaJuego = LeerFichero.arrayToJuegos(prueba);
 		assertEquals(altaJuego, altaJuegoValorEsperado);          
     }

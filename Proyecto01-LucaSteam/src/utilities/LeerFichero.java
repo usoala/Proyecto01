@@ -80,7 +80,7 @@ public class LeerFichero {
 	 * @param juegoString array tipo String: incluye los datos completos de un juego
 	 * @return altaJuego
 	 */
-	private static Juego arrayToJuegos(String[] juegoString) {
+	public static Juego arrayToJuegos(String[] juegoString) {
 		// Nombre
 		String nombre = String.valueOf(juegoString[1].replace(" ", ""));
 
