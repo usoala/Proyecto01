@@ -16,11 +16,19 @@ import model.Juego;
 public interface CatalogoJuegos {
 
 	public boolean altaJuego(Integer id, Juego juego) throws JuegoException;
+
 	public void listarJuegos() throws JuegoException;
+
 	public Integer siguienteId();
+
 	public void serializarCatalogoJuegosImpl(String fichero);
+
 	public void deSerializarCatalogoJuegosImpl(String fichero);
+
 	public void listarJuegosSigloXX() throws JuegoException;
+
 	public void listarJuegosGeneroPlataforma() throws JuegoException;
-	
+
+	public void leerDatosFichero();
+
 }

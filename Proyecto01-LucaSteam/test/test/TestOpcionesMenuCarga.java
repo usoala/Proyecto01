@@ -11,13 +11,12 @@ import org.junit.jupiter.api.Test;
 
 import control.LucaSteam;
 
-
 public class TestOpcionesMenuCarga {
-	
+
 	static Logger logger = LogManager.getLogger(TestOpcionesMenuCarga.class);
 
 	static LucaSteam lucaSteam;
-	
+
 	@BeforeAll
 	static void inicioTest() {
 		logger.info("Inicio Test Unitarios OpcionesMenuCarga");
@@ -33,7 +32,7 @@ public class TestOpcionesMenuCarga {
 	static void finTest() {
 		logger.info("Fin Test Unitarios OpcionesMenuCarga");
 	}
-	
+
 	@Test
 	void testOpcionCargaCatalogo() {
 		logger.info("ejecutando testOpcionCargaCatalogo()");
@@ -41,4 +40,5 @@ public class TestOpcionesMenuCarga {
 		boolean booleanDevuelto = lucaSteam.opcionesMenuCarga(opcion);
 		assertFalse(booleanDevuelto);
 	}
+	
 }

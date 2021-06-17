@@ -1,12 +1,9 @@
 package service;
 
-import java.util.LinkedHashMap;
-
 import dao.CatalogoJuegos;
 import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
 import model.Juego;
-import utilities.LeerFichero;
 
 /**
  * @ClassName ServiciosJuego Implementación de la Interface ServiciosJuego
@@ -20,6 +17,9 @@ import utilities.LeerFichero;
  */
 public class ServiciosJuegoImpl implements ServiciosJuego {
 
+	/**
+	 * Instancia catalogo
+	 */
 	private CatalogoJuegos catalogo = new CatalogoJuegosImpl();
 
 	/**
@@ -46,7 +46,6 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	 * @return
 	 * @throws JuegoException
 	 */
-
 	public boolean altaJuego() throws JuegoException {
 		Juego juego = new Juego();
 		juego.crearJuego();
@@ -66,16 +65,18 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 
 	/**
 	 * Implementación del método listarJuegos
-	 * @throws JuegoException 
+	 * 
+	 * @throws JuegoException
 	 *
 	 */
 	public void listarJuegos() throws JuegoException {
-		catalogo.listarJuegos() ;
+		catalogo.listarJuegos();
 	}
-	
+
 	/**
 	 * Implementación del método listarJuegosSigloXX
-	 * @throws JuegoException 
+	 * 
+	 * @throws JuegoException
 	 *
 	 */
 	public void listarJuegosSigloXX() throws JuegoException {
@@ -84,11 +85,12 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 
 	/**
 	 * Implementación del método leerDatosFichero
-	 * @return
+	 * 
 	 */
-	public LinkedHashMap<Integer, Juego> leerDatosFichero() {
-		return LeerFichero.leerDatosFichero();
+	public void leerDatosFichero() {
+		catalogo.leerDatosFichero();
 	}
+
 	/**
 	 * Implementación del método serializarCatalogoJuegosImpl
 	 *
@@ -106,15 +108,14 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 		catalogo.deSerializarCatalogoJuegosImpl("CatalogoJuegos.dat");
 
 	}
-	
+
 	/**
 	 * Implementación del método listarJuegosGeneroPlataforma
 	 *
 	 * @throws JuegoException
 	 */
-	public void listarJuegosGeneroPlataforma() throws JuegoException{
+	public void listarJuegosGeneroPlataforma() throws JuegoException {
 		catalogo.listarJuegosGeneroPlataforma();
 	}
-
 
 }

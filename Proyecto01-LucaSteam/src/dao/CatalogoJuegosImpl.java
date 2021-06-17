@@ -11,9 +11,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import model.Genero;
 import model.Juego;
+import utilities.LeerFichero;
 import exception.JuegoException;
 
 /**
@@ -82,7 +82,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 
 	/**
 	 * Implementación del método listarJuegos Lista los juegos del catalogo
-	 *
+	 * @throws JuegoException
 	 */
 	public void listarJuegos() throws JuegoException {
 		if (catalogo.size() == 0) {
@@ -114,6 +114,19 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 					.map(e -> e.getKey()).get();
 		}
 		return maxId + 1;
+	}
+	
+	/**
+	 * Implementación del método leerDatosFichero
+	 *
+	 */
+	public void leerDatosFichero() {
+		System.out.println("-- Leyendo Fichero");
+		try {
+			catalogo = LeerFichero.leerDatosFichero();
+		}catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+		}
 	}
 
 	/**
@@ -174,7 +187,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 					count++;
 				}
 			}
-			if(count== 0) {
+			if (count == 0) {
 				throw new JuegoException("No hay ningún juego del Siglo XX", 3);
 			}
 		}
@@ -195,17 +208,13 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catalogo no tiene registros", 3);
 		} else {
-			catalogo.entrySet().stream()
-				.filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
-				.forEach(j -> System.out.println("(" + j.getKey() + "): " + j.getValue()));
-			long count = catalogo.entrySet().stream()
-					.filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
-					.count();
-			if(count== 0) {
+			catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM)
+					.forEach(j -> System.out.println("(" + j.getKey() + "): " + j.getValue()));
+			long count = catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM).count();
+			if (count == 0) {
 				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}
-				
-				
+
 		}
 	}
 
