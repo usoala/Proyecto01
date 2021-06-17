@@ -1,3 +1,4 @@
+
 package utilities;
 
 import java.io.BufferedReader;
@@ -13,7 +14,7 @@ import model.Plataforma;
 /**
  * @ClassName LeerFichero
  *
- * @author Jennifer Pérez
+ * @author Jennifer PÃ©rez
  *
  * @date 15 jun. 2021
  * 
@@ -27,7 +28,7 @@ public class LeerFichero {
 	private static final String RUTAFICHERO = "CSVDatosSelecPorComas.csv";
 
 	/**
-	 * Implementación método leerDatosFichero()
+	 * ImplementaciÃ³n mÃ©todo leerDatosFichero()
 	 * 
 	 * @return
 	 */
@@ -43,7 +44,7 @@ public class LeerFichero {
 			BufferedReader br = new BufferedReader(fr);
 			String linea;
 			while ((linea = br.readLine()) != null) {
-				String[] JuegoString = linea.split(";");// convierte cada línea en array separado por comas
+				String[] JuegoString = linea.split(";");// convierte cada lÃ­nea en array separado por comas
 				Juego AltaJuego = arrayToJuegos(JuegoString);
 				Integer id = Integer.valueOf(JuegoString[0].replace(" ", ""));
 				mapaJuego.put(id, AltaJuego);
@@ -58,7 +59,7 @@ public class LeerFichero {
 		} finally {
 			// En el finally cerramos el fichero, para asegurarnos
 			// que se cierra tanto si todo va bien como si salta
-			// una excepción.
+			// una excepciÃ³n.
 			try {
 				if (null != fr) {
 					fr.close();
@@ -72,14 +73,14 @@ public class LeerFichero {
 	}
 
 	/**
-	 * Guarda en un array las tuplas de cada juego. Rango en la posición 0, nombre
+	 * Guarda en un array las tuplas de cada juego. Rango en la posiciÃ³n 0, nombre
 	 * en la 1, plataforma en la 2, ano en la 3, genero en la 4, editor en la 5 y
 	 * ventas de Europa en la 6.
 	 * 
 	 * @param juegoString array tipo String: incluye los datos completos de un juego
 	 * @return altaJuego
 	 */
-	private static Juego arrayToJuegos(String[] juegoString) {
+	public static Juego arrayToJuegos(String[] juegoString) {
 		// Nombre
 		String nombre = String.valueOf(juegoString[1].replace(" ", ""));
 
