@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import dao.CatalogoJuegos;
 import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
-import model.Editor;
 import model.Genero;
 import model.Juego;
 import model.Plataforma;
@@ -31,7 +30,7 @@ public class TestListarJuegosSigloXX {
 	static Logger logger = LogManager.getLogger(TestAltaJuego.class);
 
 	static CatalogoJuegos catalogo;
-	Juego juego = new Juego("Juego Siglo XX", 1995, Editor.ACTIVISION, Genero.ADVENTURE, Plataforma.GB, 1.05);
+	Juego juego = new Juego("Juego Siglo XX", 1995, "ACTIVISION", Genero.ADVENTURE, Plataforma.GB, 1.05);
 
 	final PrintStream standarOut = System.out;
 	final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
