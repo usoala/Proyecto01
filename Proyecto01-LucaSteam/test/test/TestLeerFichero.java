@@ -17,7 +17,7 @@ import model.Genero;
 	 * 
 	 * @version 1.0
 	 * 
-	 * @Test                                               
+	                                           
 	 */
 
 public class TestLeerFichero {
