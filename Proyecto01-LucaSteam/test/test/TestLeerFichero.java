@@ -28,8 +28,6 @@ public class TestLeerFichero {
     	Juego altaJuegoValorEsperado = new Juego ("Wii Sports", 1998, "Wii", Genero.ACTION, Plataforma.PS4, 0.0);
 		String [] prueba = new String [] {"1", "Wii Sports","PS4", "1998", "Action", "Wii", "0.0"};
     	Juego altaJuego = LeerFichero.arrayToJuegos(prueba);
-    	System.out.println(altaJuego);
-    	System.out.println(altaJuegoValorEsperado);
 		assertEquals(altaJuego, altaJuegoValorEsperado);          
     }
 }  
