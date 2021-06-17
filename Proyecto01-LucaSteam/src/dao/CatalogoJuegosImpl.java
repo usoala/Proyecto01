@@ -297,18 +297,23 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catálogo no tiene registros. ", 3);
 		} else {
-			System.out.println(" Listado de Editores ");
 			Integer key;
 			Iterator<Integer> juegos = catalogo.keySet().iterator();
 			while (juegos.hasNext()) {
 				key = juegos.next();
 				editores.add(catalogo.get(key).getEditor());
 			}
-			int i = 1;
-			for (String e : editores) {
-				System.out.println(" [" + i + "] - " + e);
-				i++;
+			if(editores.size()==0) {
+				throw new JuegoException("No hay editores para mostrar", 3);
+			} else {
+				int i = 1;
+				System.out.println(" Listado de Editores ");
+				for (String e : editores) {
+					System.out.println(" [" + i + "] - " + e);
+					i++;
+				}	
 			}
+			
 		}
 	}
 

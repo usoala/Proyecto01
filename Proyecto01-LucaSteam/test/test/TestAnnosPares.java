@@ -58,7 +58,7 @@ class TestAnnosPares {
 	void listarJuegosAnosPares() {
 		logger.info("ejecutando listarJuegosAnnosPares()");
 		try {
-			juego.setFecha(2020);
+			juego.setFecha(2019);
 			catalogo.altaJuego(1, juego);
 		} catch (JuegoException e1) {
 			logger.error(e1.getMessage());
