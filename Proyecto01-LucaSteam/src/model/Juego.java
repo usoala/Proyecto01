@@ -189,4 +189,66 @@ public class Juego implements Serializable {
 				+ ", plataforma=" + plataforma + ", ventas=" + ventas + "]";
 	}
 
+	/**
+	 * Implementación/Sobrescritura del método hashCode
+	 *
+	 * @return
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((editor == null) ? 0 : editor.hashCode());
+		result = prime * result + ((fecha == null) ? 0 : fecha.hashCode());
+		result = prime * result + ((genero == null) ? 0 : genero.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((plataforma == null) ? 0 : plataforma.hashCode());
+		result = prime * result + ((ventas == null) ? 0 : ventas.hashCode());
+		return result;
+	}
+
+	/**
+	 * Sobrescritura del método equals
+	 *
+	 * @param obj
+	 * @return
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Juego other = (Juego) obj;
+		if (editor == null) {
+			if (other.editor != null)
+				return false;
+		} else if (!editor.equals(other.editor))
+			return false;
+		if (fecha == null) {
+			if (other.fecha != null)
+				return false;
+		} else if (!fecha.equals(other.fecha))
+			return false;
+		if (genero != other.genero)
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (plataforma != other.plataforma)
+			return false;
+		if (ventas == null) {
+			if (other.ventas != null)
+				return false;
+		} else if (!ventas.equals(other.ventas))
+			return false;
+		return true;
+	}
+
+	
+
 }

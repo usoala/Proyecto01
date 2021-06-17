@@ -82,7 +82,7 @@ public class LeerFichero {
 	 */
 	public static Juego arrayToJuegos(String[] juegoString) {
 		// Nombre
-		String nombre = String.valueOf(juegoString[1].replace(" ", ""));
+		String nombre = String.valueOf(juegoString[1]);
 
 		// Plataforma
 		String plat = String.valueOf(juegoString[2].replace(" ", "_"));
