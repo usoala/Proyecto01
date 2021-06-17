@@ -1,4 +1,3 @@
-Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 1;Wii Sports;Wii;2006;Sports;Nintendo;29.02
 2;Super Mario Bros.;NES;1985;Platform;Nintendo;3.58
 3;Mario Kart Wii;Wii;2008;Racing;Nintendo;12.88
@@ -178,7 +177,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 177;Assassin's Creed II;X360;2009;Action;Ubisoft;1.56
 178;Professor Layton and the Curious Village;DS;2007;Puzzle;Nintendo;2.48
 179;Tomb Raider II;PS;1997;Action;Eidos Interactive;2.46
-180;Madden NFL 2004;PS2;N/A;Sports;Electronic Arts;0.26
 181;Dragon Quest VIII: Journey of the Cursed King;PS2;2004;Role-Playing;Square Enix;0.75
 182;Diablo III;PC;2012;Role-Playing;Activision;2.15
 183;Super Mario Bros. 3;GBA;2003;Platform;Nintendo;1.25
@@ -376,7 +374,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 375;Kung Fu;NES;1985;Action;Nintendo;0.38
 376;Batman: Arkham Asylum;X360;2009;Action;Eidos Interactive;0.97
 377;Clubhouse Games;DS;2006;Misc;Nintendo;1.83
-378;FIFA Soccer 2004;PS2;N/A;Sports;Electronic Arts;2.36
 379;Star Wars Battlefront (2015);XOne;2015;Shooter;Electronic Arts;1.22
 380;Battlefield: Bad Company 2;X360;2010;Shooter;Electronic Arts;1.02
 381;Guitar Hero: On Tour;DS;2008;Misc;Activision;1.01
@@ -430,7 +427,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 429;Enter the Matrix;PS2;2003;Action;Atari;1.12
 430;Super Mario Maker;WiiU;2015;Platform;Nintendo;0.87
 431;Fallout: New Vegas;PS3;2010;Role-Playing;Bethesda Softworks;1.08
-432;LEGO Batman: The Videogame;Wii;N/A;Action;Warner Bros. Interactive Entertainment;1.02
 433;Rhythm Heaven;DS;2008;Misc;Nintendo;0.51
 434;Ace Combat 04: Shattered Skies;PS2;2001;Simulation;Sony Computer Entertainment Europe;0.56
 435;Club Penguin: Elite Penguin Force;DS;2008;Adventure;Disney Interactive Studios;0.98
@@ -469,7 +465,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 468;Gears of War: Ultimate Edition;XOne;2015;Shooter;Microsoft Game Studios;0.32
 469;NBA 2K13;X360;2012;Sports;Take-Two Interactive;0.21
 470;Dragon Ball Z: Budokai Tenkaichi 3;PS2;2007;Fighting;Atari;0
-471;wwe Smackdown vs. Raw 2006;PS2;N/A;Fighting;N/A;1.02
 472;Middle-Earth: Shadow of Mordor;PS4;2014;Action;Warner Bros. Interactive Entertainment;1.41
 473;Star Fox;SNES;1993;Shooter;Nintendo;0.51
 474;The Sims: Livin Large;PC;2000;Misc;Electronic Arts;1.18
@@ -606,7 +601,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 605;Pokémon Colosseum;GC;2003;Role-Playing;Nintendo;0.57
 606;Deca Sports;Wii;2008;Sports;Konami Digital Entertainment;0.87
 607;Madden NFL 09;X360;2008;Sports;Electronic Arts;0.12
-608;Space Invaders;2600;N/A;Shooter;Atari;0.14
 609;Crazy Taxi;PS2;2001;Racing;Acclaim Entertainment;1.12
 610;Perfect Dark;N64;2000;Action;Nintendo;0.75
 611;Game Party;Wii;2007;Misc;Midway Games;0.78
@@ -623,7 +617,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 622;Pure;X360;2008;Racing;Disney Interactive Studios;0.85
 623;Tomb Raider: The Last Revelation;PS;1998;Action;Eidos Interactive;1.14
 624;NBA 2K13;PS3;2012;Sports;Take-Two Interactive;0.44
-625;Rock Band;X360;N/A;Misc;Electronic Arts;0.34
 626;NBA 2K14;X360;2013;Sports;Take-Two Interactive;0.2
 627;Mario Party 4;GC;2002;Misc;Nintendo;0.36
 628;uDraw Studio;Wii;2010;Misc;THQ;0.58
@@ -648,10 +641,8 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 647;Tetris Plus;PS;1996;Puzzle;JVC;0.24
 648;Pro Wrestling;NES;1987;Fighting;Nintendo;0.18
 649;Theme Hospital;PC;1997;Strategy;Electronic Arts;0.1
-650;Frogger's Adventures: Temple of the Frog;GBA;N/A;Adventure;Konami Digital Entertainment;0.18
 651;Need for Speed (2015);PS4;2015;Racing;Electronic Arts;1.49
 652;Zumba Fitness;X360;2010;Sports;505 Games;0.48
-653;LEGO Indiana Jones: The Original Adventures;Wii;N/A;Action;LucasArts;0.63
 655;Monopoly;PC;1994;Misc;Hasbro Interactive;0.81
 656;Batman: Arkham Origins;PS3;2013;Action;Warner Bros. Interactive Entertainment;0.87
 657;Dead Island;X360;2011;Action;Deep Silver;0.71
@@ -710,7 +701,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 710;Kirby: Nightmare in Dream Land;GBA;2002;Platform;Nintendo;0.1
 711;Wario Land 4;GBA;2001;Platform;Nintendo;0.73
 712;Guitar Hero III: Legends of Rock;PS3;2007;Misc;Activision;0.54
-713;Call of Duty 3;Wii;N/A;Shooter;Activision;0.84
 714;Resident Evil 4;Wii;2007;Action;Capcom;0.57
 715;Minecraft;PSV;2014;Misc;Sony Computer Entertainment Europe;0.79
 716;Onimusha 2: Samurai's Destiny;PS2;2002;Adventure;Capcom;0.44
@@ -781,7 +771,6 @@ Rank;Name;Platform;Year;Genre;Publisher;EU_Sales
 781;PES 2009: Pro Evolution Soccer;PS3;2008;Sports;Konami Digital Entertainment;1.34
 782;Need for Speed: Hot Pursuit 2;PS2;2002;Racing;Electronic Arts;0.31
 783;Mario Sports Mix;Wii;2010;Sports;Nintendo;0.45
-784;Rock Band;Wii;N/A;Misc;MTV Games;0.56
 785;Dynasty Warriors 4;PS2;2003;Action;Tecmo Koei;0.21
 786;Mortal Kombat;X360;2011;Fighting;Warner Bros. Interactive Entertainment;0.33
 787;Parasite Eve;PS;1998;Role-Playing;SquareSoft;0.07

@@ -41,10 +41,4 @@ public class TestOpcionesMenuCarga {
 		assertFalse(booleanDevuelto);
 	}
 	
-	@Test
-	void testOpcionListaVacia() {
-		logger.info("ejecutando testOpcionListaVacia");
-		Integer opcion = 3;
-		
-	}
 }
