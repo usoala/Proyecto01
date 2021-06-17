@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Genero;
 import model.Juego;
+import utilities.LeerFichero;
 import exception.JuegoException;
 
 /**
@@ -114,6 +115,19 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		}
 		return maxId + 1;
 	}
+	
+	/**
+	 * Implementación del método leerDatosFichero
+	 *
+	 */
+	public void leerDatosFichero() {
+		System.out.println("-- Leyendo Fichero");
+		try {
+			catalogo = LeerFichero.leerDatosFichero();
+		}catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+	}
 
 	/**
 	 * Implementación del método serializarCatalogoJuegosImpl
@@ -194,9 +208,9 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catalogo no tiene registros", 3);
 		} else {
-			catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
+			catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM)
 					.forEach(j -> System.out.println("(" + j.getKey() + "): " + j.getValue()));
-			long count = catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATAFORM).count();
+			long count = catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM).count();
 			if (count == 0) {
 				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}

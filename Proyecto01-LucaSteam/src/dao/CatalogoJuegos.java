@@ -29,4 +29,6 @@ public interface CatalogoJuegos {
 
 	public void listarJuegosGeneroPlataforma() throws JuegoException;
 
+	public void leerDatosFichero();
+
 }
