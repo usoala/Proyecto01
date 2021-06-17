@@ -30,5 +30,9 @@ public interface ServiciosJuego {
 	public void listarJuegosSigloXX() throws JuegoException;
 
 	public void listarJuegosGeneroPlataforma() throws JuegoException;
+	
+	public void listarJuegosConsolasNintendo() throws JuegoException;
+	
+	public void listarJuegosAnnosPares() throws JuegoException;
 
 }

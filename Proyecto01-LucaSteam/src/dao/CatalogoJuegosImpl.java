@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Genero;
 import model.Juego;
+import model.Plataforma;
 import utilities.LeerFichero;
 import exception.JuegoException;
 
@@ -217,6 +218,66 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}
 
+		}
+	}
+	
+	/**
+	 * Implementación del método listarJuegosConsolasNintendo
+	 * 
+	 * Filtra e imprime los juegos donde la plataforma pertenezca a consolas de Nintendo
+	 *
+	 * @throws JuegoException
+	 */
+	public void listarJuegosConsolasNintendo() throws JuegoException{
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catálogo no tiene registros. ", 3);
+		} else {
+			Integer key;
+			int count = 0;
+			Iterator<Integer> juegos = catalogo.keySet().iterator();
+			Plataforma[] nintendo = {Plataforma._3DS, Plataforma.DS, Plataforma.GB, Plataforma.GBA, Plataforma.GC, Plataforma.N64,
+					Plataforma.NES, Plataforma.SNES, Plataforma.WII, Plataforma.WIIU};
+			while (juegos.hasNext()) {
+				key = juegos.next();
+				for(int i=0; i<nintendo.length; i++) {
+					if (catalogo.get(key).getPlataforma() == nintendo[i]) {
+						System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Plataforma: " + catalogo.get(key).getPlataforma());
+						count++;
+					}
+				}
+			}
+			if (count == 0) {
+				throw new JuegoException("No hay ningún juego para plataformas de Nintendo", 3);
+			}
+			
+		}
+	}
+	
+	/**
+	 * Implementación del método listarJuegosAnnosPares
+	 * 
+	 * Filtra e imprime los juegos donde la fecha pertenezca a años pares en el catálogo de juegos
+	 *
+	 * @throws JuegoException
+	 */
+	public void listarJuegosAnnosPares() throws JuegoException{
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catálogo no tiene registros. ", 3);
+		} else {
+			Integer key;
+			int count = 0;
+			Iterator<Integer> juegos = catalogo.keySet().iterator();
+			while (juegos.hasNext()) {
+				key = juegos.next();
+				if (catalogo.get(key).getFecha()%2 == 0) {
+					System.out.println(" [" + key + "] - " + catalogo.get(key).getNombre() + " --> Año: "
+							+ catalogo.get(key).getFecha());
+					count++;
+				}
+			}
+			if (count == 0) {
+				throw new JuegoException("No hay ningún juego publicado en años pares", 3);
+			}
 		}
 	}
 
