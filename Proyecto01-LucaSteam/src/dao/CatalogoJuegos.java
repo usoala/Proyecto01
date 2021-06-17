@@ -31,4 +31,6 @@ public interface CatalogoJuegos {
 
 	public void leerDatosFichero();
 
+	public void listarEditores() throws JuegoException;
+
 }

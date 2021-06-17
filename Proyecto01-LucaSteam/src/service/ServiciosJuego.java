@@ -31,4 +31,6 @@ public interface ServiciosJuego {
 
 	public void listarJuegosGeneroPlataforma() throws JuegoException;
 
+	public void listarEditores() throws JuegoException;
+
 }

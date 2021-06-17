@@ -117,5 +117,16 @@ public class ServiciosJuegoImpl implements ServiciosJuego {
 	public void listarJuegosGeneroPlataforma() throws JuegoException {
 		catalogo.listarJuegosGeneroPlataforma();
 	}
+	
+	/**
+	 * Implementación del método listarEditores
+	 *
+	 * @throws JuegoException
+	 */
+	@Override
+	public void listarEditores() throws JuegoException {
+		catalogo.listarEditores();
+		
+	}
 
 }
