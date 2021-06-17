@@ -50,5 +50,5 @@ public class TestOpcionesMenuCarga {
 		boolean booleanDevuelto = lucaSteam.opcionesMenuCarga(opcion);
 		assertFalse(booleanDevuelto);
 	}
-	
+
 }

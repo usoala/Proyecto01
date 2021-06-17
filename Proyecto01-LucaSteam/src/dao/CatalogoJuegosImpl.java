@@ -82,6 +82,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 
 	/**
 	 * Implementación del método listarJuegos Lista los juegos del catalogo
+	 * 
 	 * @throws JuegoException
 	 */
 	public void listarJuegos() throws JuegoException {
@@ -115,16 +116,17 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		}
 		return maxId + 1;
 	}
-	
+
 	/**
-	 * Implementación del método leerDatosFichero
+	 * Implementación del método leerDatosFichero Lee los datos del fichero CSV y
+	 * guarda en catalogo.
 	 *
 	 */
 	public void leerDatosFichero() {
 		System.out.println("-- Leyendo Fichero");
 		try {
 			catalogo = LeerFichero.leerDatosFichero();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
@@ -196,13 +198,13 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 	/**
 	 * Implementación del método listarJuegosGeneroPlataforma
 	 * 
-	 * Filtra e imprime los juegos por genero = PLATAFORM del catálogo de juegos
+	 * Filtra e imprime los juegos por genero = PLATFORM del catálogo de juegos
 	 *
 	 * @throws JuegoException
 	 * 
 	 *                        Genera excepciones en caso de que el catalogo esté
 	 *                        vacío o no se haya encontrado con ningún juego con
-	 *                        genero = PLATAFORM
+	 *                        genero = PLATFORM
 	 */
 	public void listarJuegosGeneroPlataforma() throws JuegoException {
 		if (catalogo.size() == 0) {
