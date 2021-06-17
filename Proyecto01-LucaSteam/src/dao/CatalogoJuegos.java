@@ -31,4 +31,7 @@ public interface CatalogoJuegos {
 
 	public void leerDatosFichero();
 
+	public void listarJuegosConsolasNintendo() throws JuegoException;
+	
+	public void listarJuegosAnnosPares() throws JuegoException;
 }
