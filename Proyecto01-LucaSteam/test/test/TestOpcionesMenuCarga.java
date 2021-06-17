@@ -11,6 +11,16 @@ import org.junit.jupiter.api.Test;
 
 import control.LucaSteam;
 
+/**
+ * @ClassName TestOpcionesMenuCarga
+ *
+ * @author María Castro
+ *
+ * @date 17 jun. 2021
+ * 
+ * @version 1.0
+ */
+
 public class TestOpcionesMenuCarga {
 
 	static Logger logger = LogManager.getLogger(TestOpcionesMenuCarga.class);
