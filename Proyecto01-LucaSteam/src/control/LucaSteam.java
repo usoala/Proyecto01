@@ -1,5 +1,8 @@
 package control;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import gui.Menu;
 import gui.MenuCargaCatalogo;
 import service.ServiciosJuego;
@@ -16,6 +19,8 @@ import utilities.Teclado;
  * @version 1.0
  */
 public class LucaSteam {
+	
+	static Logger logger = LogManager.getLogger(LucaSteam.class);
 	
 	/**
 	 * Instancia servicios
@@ -38,11 +43,11 @@ public class LucaSteam {
 					opcion = Teclado.tecladoInt();
 					if((opcion==1)||(opcion==2)||(opcion==3)) {
 						opcionBool = false;
-					}else {					
-						throw new Exception();						
+					} else {
+						throw new Exception();
 					}
 				}catch (Exception e) {
-		            System.out.println("error: " + e.toString());
+		            logger.error(e.toString());
 		        }
 			}while(opcionBool);
 			continuaMenu1 = this.opcionesMenuCarga(opcion);
@@ -54,7 +59,7 @@ public class LucaSteam {
 			Menu.mostrarMenu();
 			continuaMenu2 = this.opcionesMenuPrincipal();
 		} while(continuaMenu2);
-		System.out.println(" **FIN DE LA SESION** ");
+		logger.info(" **FIN DE LA SESION** ");
 	}
 	
 	/**
@@ -68,18 +73,18 @@ public class LucaSteam {
 			case 1:
 				//CARGA DESDE BBDD
 				servicios.deSerializarCatalogoJuegosImpl();
-				System.out.println("El catálogo ha sido inicializado desde base de datos");
+				logger.info("El catálogo ha sido inicializado desde base de datos");
 				sigueMenu1 = false;
 				break;
 			case 2:
 				//CARGA DESDE FICHERO
 				servicios.leerDatosFichero();
-				System.out.println("El catálogo ha sido inicializado desde fichero");
+				logger.info("El catálogo ha sido inicializado desde fichero");
 				sigueMenu1 = false;
 				break;
 			case 3:
 				//CATÁLOGO VACÍO
-				System.out.println("El catálogo ha sido inicializado vacío");
+				logger.info("El catálogo ha sido inicializado vacío");
 				sigueMenu1 = false;
 				break;
 		}
@@ -116,7 +121,7 @@ public class LucaSteam {
 					break;
 			}
 		}catch (Exception e) {
-            System.out.println("error: " + e.toString());
+            logger.error(e.toString());
         }
         return sigueMenu2;
     }
@@ -134,10 +139,10 @@ public class LucaSteam {
         	if(guardar.toUpperCase().charAt(0) == 'S') {
         		try {
         			servicios.serializarCatalogoJuegosImpl();
-        			System.out.println("Los cambios han sido guardados");
+        			logger.info("Los cambios han sido guardados");
         		}catch (Exception e){
         			e.printStackTrace();
-        			System.out.println("Error: " + e.getMessage());
+        			logger.error(e.getMessage());
         		}
         	}
         }

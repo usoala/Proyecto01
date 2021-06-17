@@ -15,6 +15,9 @@ public enum Genero {
 	ACTION(1), ADVENTURE(2), FIGHTING(3), MISC(4), PLATFORM(5), PUZZLE(6), RACING(7), ROLE_PLAYING(8), SHOOTER(9),
 	SIMULATION(10), SPORTS(11), STRATEGY(12);
 
+	/**
+	 * Atributo codigo
+	 */
 	private final int codigo;
 
 	/**

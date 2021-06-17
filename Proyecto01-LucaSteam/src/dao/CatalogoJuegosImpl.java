@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Genero;
 import model.Juego;
+import utilities.LeerFichero;
 import exception.JuegoException;
 
 /**
@@ -81,7 +82,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 
 	/**
 	 * Implementación del método listarJuegos Lista los juegos del catalogo
-	 *
+	 * @throws JuegoException
 	 */
 	public void listarJuegos() throws JuegoException {
 		if (catalogo.size() == 0) {
@@ -113,6 +114,19 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 					.map(e -> e.getKey()).get();
 		}
 		return maxId + 1;
+	}
+	
+	/**
+	 * Implementación del método leerDatosFichero
+	 *
+	 */
+	public void leerDatosFichero() {
+		System.out.println("-- Leyendo Fichero");
+		try {
+			catalogo = LeerFichero.leerDatosFichero();
+		}catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+		}
 	}
 
 	/**
