@@ -38,7 +38,9 @@ public class LucaSteam {
 					opcion = Teclado.tecladoInt();
 					if((opcion==1)||(opcion==2)||(opcion==3)) {
 						opcionBool = false;
-					}	
+					}else {					
+						throw new Exception();						
+					}
 				}catch (Exception e) {
 		            System.out.println("error: " + e.toString());
 		        }

@@ -194,9 +194,9 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 		if (catalogo.size() == 0) {
 			throw new JuegoException("El catalogo no tiene registros", 3);
 		} else {
-			catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATAFORM)
+			catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM)
 					.forEach(j -> System.out.println("(" + j.getKey() + "): " + j.getValue()));
-			long count = catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATAFORM).count();
+			long count = catalogo.entrySet().stream().filter(a -> a.getValue().getGenero() == Genero.PLATFORM).count();
 			if (count == 0) {
 				throw new JuegoException("No hay ningún juego de género PLATFORM", 3);
 			}
