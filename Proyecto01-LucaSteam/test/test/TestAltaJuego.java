@@ -8,7 +8,6 @@ import static org.junit.Assert.assertEquals;
 import dao.CatalogoJuegos;
 import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
-import model.Editor;
 import model.Genero;
 import model.Juego;
 import model.Plataforma;
@@ -33,7 +32,7 @@ class TestAltaJuego {
 
 	static CatalogoJuegos catalogo;
 	static ServiciosJuego servicios;
-	Juego juego = new Juego("Prueba", 2020, Editor._505GAMES, Genero.ACTION, Plataforma._2600, 0.01);
+	Juego juego = new Juego("Prueba", 2020, "505GAMES", Genero.ACTION, Plataforma._2600, 0.01);
 
 	@BeforeAll
 	static void inicioTest() {
