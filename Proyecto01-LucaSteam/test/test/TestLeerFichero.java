@@ -25,9 +25,11 @@ public class TestLeerFichero {
      @Test  
     public void testArrayOk() {
     	logger.info("ejecutando testArrayOk()");
-    	Juego altaJuegoValorEsperado = new Juego ("WiiSports", 2006, "Wii", Genero.ROLE_PLAYING, Plataforma._2600, 2.0);
-		String [] prueba = new String [] {"1", "Wii Sports","2600", "2006", "Role-Playing", "Wii", "2.0"};
+    	Juego altaJuegoValorEsperado = new Juego ("Wii Sports", 1998, "Wii", Genero.ACTION, Plataforma.PS4, 0.0);
+		String [] prueba = new String [] {"1", "Wii Sports","PS4", "1998", "Action", "Wii", "0.0"};
     	Juego altaJuego = LeerFichero.arrayToJuegos(prueba);
+    	System.out.println(altaJuego);
+    	System.out.println(altaJuegoValorEsperado);
 		assertEquals(altaJuego, altaJuegoValorEsperado);          
     }
 }  
