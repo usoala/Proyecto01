@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Genero;
@@ -278,6 +280,40 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 			if (count == 0) {
 				throw new JuegoException("No hay ningún juego publicado en años pares", 3);
 			}
+		}
+	}
+
+	/**
+	 * Implementación del método listarEditores Lista los editores de los juegos del
+	 * catálogo
+	 *
+	 * @throws JuegoException
+	 * 
+	 *                        Genera excepciones en caso de que el catalogo esté
+	 *                        vacío
+	 */
+	public void listarEditores() throws JuegoException {
+		Set<String> editores = new HashSet();
+		if (catalogo.size() == 0) {
+			throw new JuegoException("El catálogo no tiene registros. ", 3);
+		} else {
+			Integer key;
+			Iterator<Integer> juegos = catalogo.keySet().iterator();
+			while (juegos.hasNext()) {
+				key = juegos.next();
+				editores.add(catalogo.get(key).getEditor());
+			}
+			if(editores.size()==0) {
+				throw new JuegoException("No hay editores para mostrar", 3);
+			} else {
+				int i = 1;
+				System.out.println(" Listado de Editores ");
+				for (String e : editores) {
+					System.out.println(" [" + i + "] - " + e);
+					i++;
+				}	
+			}
+			
 		}
 	}
 

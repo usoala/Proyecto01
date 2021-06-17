@@ -35,4 +35,6 @@ public interface ServiciosJuego {
 	
 	public void listarJuegosAnnosPares() throws JuegoException;
 
+	public void listarEditores() throws JuegoException;
+
 }

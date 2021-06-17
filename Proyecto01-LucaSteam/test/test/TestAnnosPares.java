@@ -1,18 +1,14 @@
 package test;
 
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import dao.CatalogoJuegos;
 import dao.CatalogoJuegosImpl;
 import exception.JuegoException;
@@ -21,65 +17,62 @@ import model.Juego;
 import model.Plataforma;
 
 /**
- * @ClassName TestListarJuegos
+ * @ClassName TestLeerFichero
  *
- * @author Usoa Larrarte
+ * @author Sara Silvo
  *
  * @date 17 jun. 2021
- * 
+ *
  * @version 1.0
  */
-public class TestListarJuegos {
 
-	static Logger logger = LogManager.getLogger(TestListarJuegos.class);
+class TestAnnosPares {
+
+	static Logger logger = LogManager.getLogger(TestAnnosPares.class);
 
 	static CatalogoJuegos catalogo;
 
-	final PrintStream standardOut = System.out;
+	Juego juego = new Juego("Juego prueba publicado año par", 2020, "Wii", Genero.ADVENTURE, Plataforma.PSP, 1.05);
+
+	final PrintStream standarOut = System.out;
 	final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
 	@BeforeAll
 	static void inicioTest() {
-		logger.info("Inicio Test Unitarios ListarJuegos");
+		logger.info("Inicio Test Unitarios Listar Juegos publicados en años pares");
 	}
 
 	@BeforeEach
 	void crearCatalogoServicios() {
-		logger.info("Crear nuevo catalogo e iniciar StreamCaptor");
+		logger.info("Crear nuevo catalogo y servicios. Iniciar StreamCaptor");
 		catalogo = new CatalogoJuegosImpl();
 		System.setOut(new PrintStream(outputStreamCaptor));
 	}
 
 	@AfterAll
-	static void finTest() {
-		logger.info("Fin Test Unitarios ListarJuegos");
+	static void finalTest() {
+		logger.info("Fin Test Unitarios Listar Juegos publicados en años pares");
 	}
 
 	@Test
-	void listarConRegistros() {
-		logger.info("ejecutando listarConRegistros()");
-		Juego juego = new Juego("Juego Prueba 1", 2019, "DEEP_SILVER", Genero.MISC, Plataforma.PS4, 0.01);
-		Juego juego2 = new Juego("Juego Prueba 2", 2020, "505GAMES", Genero.PLATFORM, Plataforma._2600, 0.02);
+	void listarJuegosAnosPares() {
+		logger.info("ejecutando listarJuegosAnnosPares()");
 		try {
+			juego.setFecha(2019);
 			catalogo.altaJuego(1, juego);
-			catalogo.altaJuego(2, juego2);
 		} catch (JuegoException e1) {
 			logger.error(e1.getMessage());
 		}
-		try {
-			catalogo.listarJuegos();
-		} catch (Exception e) {
-			System.out.println("error: " + e.toString());
-		}
-		assertTrue(outputStreamCaptor.toString().trim().contains("Juego Prueba 1")
-				&& outputStreamCaptor.toString().trim().contains("Juego Prueba 2"));
+		assertThrows(JuegoException.class, () -> {
+			catalogo.listarJuegosAnnosPares();
+		});
 	}
 
 	@Test
 	void listarConCatalogoVacio() {
-		logger.info("ejecutando listarConCatalogoVacio()");
+		logger.info("ejecutando listarCatalogoVacio()");
 		assertThrows(JuegoException.class, () -> {
-			catalogo.listarJuegos();
+			catalogo.listarJuegosAnnosPares();
 		});
 	}
 

@@ -118,6 +118,18 @@ public class LucaSteam {
 				// LISTAR JUEGOS SIGLO XX
 				servicios.listarJuegosSigloXX();
 				break;
+			case 5:
+				//LISTAR JUEGOS CONSOLA NINTENDO
+				servicios.listarJuegosConsolasNintendo();
+				break;
+			case 6:
+				//LISTAR JUEGOS AÑOS PARES
+				servicios.listarJuegosAnnosPares();
+				break;
+			case 7:
+				//LISTAR EDITORES
+				servicios.listarEditores();
+				break;
 			case 0:
 				sigueMenu2 = salir();
 				break;
