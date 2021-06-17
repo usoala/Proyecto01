@@ -82,7 +82,7 @@ public class CatalogoJuegosImpl implements CatalogoJuegos {
 
 	/**
 	 * Implementación del método listarJuegos Lista los juegos del catalogo
-	 *
+	 * @throws JuegoException
 	 */
 	public void listarJuegos() throws JuegoException {
 		if (catalogo.size() == 0) {
