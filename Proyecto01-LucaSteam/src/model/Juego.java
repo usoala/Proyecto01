@@ -12,11 +12,10 @@ import utilities.Teclado;
  * 
  * @version 1.0
  */
-
 public class Juego implements Serializable {
 	private String nombre;
 	private Integer fecha;
-	private Editor editor;
+	private String editor;
 	private Genero genero;
 	private Plataforma plataforma;
 	private Double ventas;
@@ -39,7 +38,7 @@ public class Juego implements Serializable {
 	 * @param plataforma
 	 * @param ventas
 	 */
-	public Juego(String nombre, Integer fecha, Editor editor, Genero genero, Plataforma plataforma, Double ventas) {
+	public Juego(String nombre, Integer fecha, String editor, Genero genero, Plataforma plataforma, Double ventas) {
 		super();
 		this.nombre = nombre;
 		this.fecha = fecha;
@@ -90,7 +89,7 @@ public class Juego implements Serializable {
 	 *
 	 * @return editor
 	 */
-	public Editor getEditor() {
+	public String getEditor() {
 		return editor;
 	}
 
@@ -99,7 +98,7 @@ public class Juego implements Serializable {
 	 *
 	 * @param editor to set editor
 	 */
-	public void setEditor(Editor editor) {
+	public void setEditor(String editor) {
 		this.editor = editor;
 	}
 
@@ -171,9 +170,7 @@ public class Juego implements Serializable {
 			System.out.println("Seleccione la plataforma");
 			Plataforma.mostrarPlataforma();
 			this.plataforma = Plataforma.dimePlataforma(Teclado.tecladoInt());
-			System.out.println("Seleccione el editor");
-			Editor.mostrarEditor();
-			this.editor = Editor.dimeEditor(Teclado.tecladoInt());
+			this.editor = Teclado.tecladoLinea("Introduce el editor del juego");
 			this.ventas = Teclado.tecladoDouble("Introduce el numero de ventas (use la coma decimal)");
 
 		} catch (Exception e) {
