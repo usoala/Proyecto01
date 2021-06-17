@@ -31,7 +31,7 @@ import model.Plataforma;
  */
 public class TestListarJuegos {
 
-	static Logger logger = LogManager.getLogger(TestAltaJuego.class);
+	static Logger logger = LogManager.getLogger(TestListarJuegos.class);
 
 	static CatalogoJuegos catalogo;
 

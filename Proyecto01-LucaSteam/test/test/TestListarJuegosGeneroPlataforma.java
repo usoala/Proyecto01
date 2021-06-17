@@ -31,7 +31,7 @@ import model.Plataforma;
  */
 public class TestListarJuegosGeneroPlataforma {
 
-	static Logger logger = LogManager.getLogger(TestAltaJuego.class);
+	static Logger logger = LogManager.getLogger(TestListarJuegosGeneroPlataforma.class);
 
 	static CatalogoJuegos catalogo;
 	Juego juego = new Juego("Juego Genero Plataform", 2020, "505GAMES", Genero.PLATFORM, Plataforma._2600, 0.01);
