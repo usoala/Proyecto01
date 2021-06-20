@@ -29,7 +29,7 @@ import model.Plataforma;
  */
 public class TestListarJuegosSigloXX {
 
-	static Logger logger = LogManager.getLogger(TestAltaJuego.class);
+	static Logger logger = LogManager.getLogger(TestListarJuegosSigloXX.class);
 
 	static CatalogoJuegos catalogo;
 	Juego juego = new Juego("Juego Siglo XX", 1995, "ACTIVISION", Genero.ADVENTURE, Plataforma.GB, 1.05);
