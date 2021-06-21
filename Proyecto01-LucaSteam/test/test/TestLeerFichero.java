@@ -24,6 +24,7 @@ import model.Genero;
 public class TestLeerFichero {
 	static Logger logger = LogManager.getLogger(TestLeerFichero.class);
 
+
 	/**
 	 * Prueba unitaria testArrayOk para el método arrayToJuegos. Compruebo que el
 	 * objeto creado es igual al objeto esperado.
